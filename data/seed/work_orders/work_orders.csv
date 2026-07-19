@@ -1,0 +1,603 @@
+WO_ID,Date,Equipment_Tag,Type,Problem_Text,Action_Text,Technician,Downtime_Hrs,Status
+WO-1468,2021-07-02,P-101B,preventive,gland leak minor,"tightnd gland, ok",K. Menon,3,closed
+WO-1360,2021-07-07,FV-112,preventive,positioner drift,recalib positioner,M. Das,1,closed
+WO-1476,2021-07-18,V-201,preventive,spares availability chk,verified in store,N. Rao,2,closed
+WO-1350,2021-07-24,PT-108,preventive,spares availability chk,verified in store,P. Nair,6,closed
+WO-1180,2021-07-29,PT-108,preventive,tag/label refresh,relabelled,P. Nair,1,closed
+WO-1191,2021-08-13,E-301,preventive,spares availability chk,verified in store,R. Sharma,6,closed
+WO-1435,2021-08-16,P-101B,preventive,lube top-up,"greased, ok",V. Reddy,1,closed
+WO-1506,2021-08-18,V-201,preventive,tag/label refresh,relabelled,M. Das,6,closed
+WO-1182,2021-08-21,P-101B,preventive,housekeeping round,area cleaned,N. Rao,6,closed
+WO-1530,2021-08-23,PT-108,preventive,cln unit exterior,cleaned,V. Reddy,3,closed
+WO-1424,2021-08-25,V-201,preventive,condition monitoring reading,"reading normal, filed",J. Patel,3,closed
+WO-1019,2021-09-04,PT-108,preventive,xmtr reading drift,recalib xmtr,V. Reddy,8,closed
+WO-1175,2021-09-07,P-101A,preventive,housekeeping round,area cleaned,N. Rao,6,closed
+WO-1369,2021-09-07,E-301,preventive,spares availability chk,verified in store,J. Patel,0,closed
+WO-1597,2021-09-11,FV-112,preventive,positioner drift,recalib positioner,N. Rao,3,closed
+WO-1157,2021-09-14,T-401,preventive,routine insp,no abnrml found,S. Iyer,6,closed
+WO-1137,2021-09-20,C-501,preventive,spares availability chk,verified in store,K. Menon,6,closed
+WO-1063,2021-09-24,P-101A,preventive,gland leak minor,"tightnd gland, ok",P. Nair,6,closed
+WO-1509,2021-09-28,V-201,preventive,lube top-up,"greased, ok",M. Das,8,closed
+WO-1015,2021-10-02,PT-108,preventive,lube top-up,"greased, ok",M. Das,4,closed
+WO-1385,2021-10-02,PT-108,preventive,abnrml reading susp,"chkd, recalib",N. Rao,3,closed
+WO-1308,2021-10-12,C-501,preventive,lube top-up,"greased, ok",P. Nair,8,closed
+WO-1312,2021-10-12,E-301,preventive,routine pm as per schedule,"completed, no abnrml found",P. Nair,12,closed
+WO-1125,2021-10-14,C-501,preventive,cln unit exterior,cleaned,P. Nair,12,closed
+WO-1101,2021-10-15,P-101B,preventive,condition monitoring reading,"reading normal, filed",V. Reddy,3,closed
+WO-1221,2021-10-21,P-101A,preventive,spares availability chk,verified in store,R. Sharma,3,closed
+WO-1496,2021-10-22,C-501,preventive,paint touch-up,done,J. Patel,2,closed
+WO-1536,2021-10-24,V-201,preventive,lube top-up,"greased, ok",M. Das,3,closed
+WO-1595,2021-10-25,V-201,preventive,6-monthly insp,"insp ok, within limit",N. Rao,8,closed
+WO-1459,2021-10-30,P-101B,preventive,tag/label refresh,relabelled,P. Nair,2,closed
+WO-1392,2021-11-01,E-301,preventive,paint touch-up,done,N. Rao,12,closed
+WO-1199,2021-11-02,C-501,preventive,routine pm as per schedule,"completed, no abnrml found",J. Patel,8,closed
+WO-1511,2021-11-05,T-401,preventive,spares availability chk,verified in store,K. Menon,2,closed
+WO-1271,2021-11-07,C-501,preventive,cln unit exterior,cleaned,J. Patel,0,closed
+WO-1593,2021-11-08,FV-112,preventive,housekeeping round,area cleaned,V. Reddy,4,closed
+WO-1201,2021-11-12,P-101B,preventive,cln unit exterior,cleaned,S. Iyer,4,closed
+WO-1293,2021-11-12,V-201,preventive,lube top-up,"greased, ok",P. Nair,8,closed
+WO-1581,2021-11-12,P-101A,preventive,cln unit exterior,cleaned,P. Nair,8,closed
+WO-1001,2021-11-15,P-101A,corrective,"brg noise p101a hi vib, excsv vibn DE end","monitored, vibn trending up, seel chk advised",R. Sharma,4,closed
+WO-1234,2021-11-17,PT-108,preventive,abnrml reading susp,"chkd, recalib",J. Patel,12,closed
+WO-1391,2021-11-17,P-101A,preventive,6-monthly insp,"insp ok, within limit",S. Iyer,0,closed
+WO-1049,2021-11-18,P-101A,corrective,"brg noise, minor vib","lubd brg, chkd algn",N. Rao,1,closed
+WO-1502,2021-11-19,E-301,corrective,dp hi susp choke,"chkd, cln plan raised",J. Patel,4,closed
+WO-1224,2021-11-25,E-301,preventive,paint touch-up,done,K. Menon,0,closed
+WO-1304,2021-11-27,E-301,preventive,channel gskt weep,tightnd bolts,R. Sharma,2,closed
+WO-1002,2021-11-28,P-101A,corrective,"mech seel lkg p101a, seel failure, oil on baseplate","chng mech seel, algn chkd, brg inspd",M. Das,3,closed
+WO-1551,2021-11-28,P-101B,preventive,gland leak minor,"tightnd gland, ok",R. Sharma,4,closed
+WO-1235,2021-11-29,FV-112,preventive,vlv stiff opn,adj positioner,P. Nair,12,closed
+WO-1552,2021-11-29,P-101A,preventive,lube top-up,"greased, ok",V. Reddy,2,closed
+WO-1513,2021-11-30,PT-108,preventive,6-monthly insp,"insp ok, within limit",M. Das,2,closed
+WO-1546,2021-12-07,P-101B,preventive,gland leak minor,"tightnd gland, ok",M. Das,6,closed
+WO-1014,2021-12-09,C-501,preventive,tag/label refresh,relabelled,T. Bose,4,closed
+WO-1031,2021-12-09,P-101A,preventive,spares availability chk,verified in store,A. Khan,12,closed
+WO-1261,2021-12-10,C-501,preventive,routine pm as per schedule,"completed, no abnrml found",R. Sharma,4,closed
+WO-1289,2021-12-27,P-101B,preventive,housekeeping round,area cleaned,V. Reddy,6,closed
+WO-1516,2022-01-02,FV-112,preventive,lube top-up,"greased, ok",S. Iyer,4,closed
+WO-1242,2022-01-10,P-101A,preventive,routine pm - vibn chk,"vibn within limit, cln done",T. Bose,8,closed
+WO-1395,2022-01-14,T-401,preventive,routine insp,no abnrml found,T. Bose,2,closed
+WO-1430,2022-01-18,PT-108,preventive,abnrml reading susp,"chkd, recalib",P. Nair,3,closed
+WO-1054,2022-01-21,P-101A,preventive,spares availability chk,verified in store,A. Khan,3,closed
+WO-1338,2022-01-22,P-101B,preventive,housekeeping round,area cleaned,S. Iyer,0,closed
+WO-1012,2022-01-26,FV-112,preventive,paint touch-up,done,A. Khan,8,closed
+WO-1343,2022-02-05,P-101A,preventive,spares availability chk,verified in store,V. Reddy,4,closed
+WO-1062,2022-02-15,V-201,corrective,level gauge foggy,cln level gauge,A. Khan,2,closed
+WO-1356,2022-02-15,PT-108,preventive,spares availability chk,verified in store,R. Sharma,3,closed
+WO-1219,2022-02-19,T-401,preventive,condition monitoring reading,"reading normal, filed",V. Reddy,8,closed
+WO-1230,2022-02-19,PT-108,corrective,xmtr reading drift,recalib xmtr,T. Bose,3,closed
+WO-1491,2022-02-23,P-101A,preventive,tag/label refresh,relabelled,J. Patel,0,closed
+WO-1364,2022-02-28,V-201,preventive,paint touch-up,done,S. Iyer,8,closed
+WO-1492,2022-03-02,FV-112,preventive,cln unit exterior,cleaned,R. Sharma,2,closed
+WO-1520,2022-03-06,P-101B,preventive,cln unit exterior,cleaned,R. Sharma,0,closed
+WO-1584,2022-03-11,PT-108,corrective,abnrml reading susp,"chkd, recalib",R. Sharma,3,closed
+WO-1296,2022-03-22,V-201,corrective,relief vlv insp due,relief vlv tested ok,K. Menon,0,closed
+WO-1146,2022-03-26,P-101A,preventive,condition monitoring reading,"reading normal, filed",P. Nair,12,closed
+WO-1195,2022-03-27,P-101B,preventive,routine pm as per schedule,"completed, no abnrml found",R. Sharma,6,closed
+WO-1472,2022-03-29,P-101A,preventive,lube top-up,"greased, ok",N. Rao,3,closed
+WO-1353,2022-03-31,PT-108,preventive,6-monthly insp,"insp ok, within limit",J. Patel,2,closed
+WO-1344,2022-04-01,C-501,corrective,oil leak minor,"tightnd flange, cln",T. Bose,12,closed
+WO-1185,2022-04-04,P-101B,preventive,condition monitoring reading,"reading normal, filed",K. Menon,12,closed
+WO-1475,2022-04-07,P-101B,preventive,fastener/guard chk,"retightened, ok",K. Menon,2,closed
+WO-1415,2022-04-11,V-201,preventive,cln unit exterior,cleaned,P. Nair,4,closed
+WO-1320,2022-04-13,V-201,preventive,condition monitoring reading,"reading normal, filed",V. Reddy,6,closed
+WO-1478,2022-04-13,C-501,corrective,hi vib alarm,"chkd algn, lubd brg",A. Khan,8,closed
+WO-1179,2022-04-15,P-101B,preventive,lube top-up,"greased, ok",M. Das,8,closed
+WO-1021,2022-04-19,C-501,preventive,housekeeping round,area cleaned,P. Nair,2,closed
+WO-1575,2022-04-21,P-101A,preventive,tag/label refresh,relabelled,N. Rao,8,closed
+WO-1376,2022-04-22,E-301,corrective,channel gskt weep,tightnd bolts,J. Patel,0,closed
+WO-1008,2022-04-27,P-101A,preventive,pm - seel & brg condition chk,"insp ok, lubd",T. Bose,3,closed
+WO-1193,2022-04-29,E-301,preventive,dp hi susp choke,"chkd, cln plan raised",N. Rao,0,closed
+WO-1517,2022-04-30,P-101A,preventive,paint touch-up,done,A. Khan,3,closed
+WO-1572,2022-05-03,P-101A,preventive,cplg guard loose,cplg guard refitted,S. Iyer,1,closed
+WO-1499,2022-05-04,P-101A,preventive,tag/label refresh,relabelled,S. Iyer,0,closed
+WO-1232,2022-05-10,FV-112,preventive,spares availability chk,verified in store,A. Khan,2,closed
+WO-1557,2022-05-11,T-401,preventive,housekeeping round,area cleaned,R. Sharma,6,closed
+WO-1250,2022-05-12,PT-108,corrective,xmtr reading drift,recalib xmtr,S. Iyer,2,closed
+WO-1248,2022-05-14,E-301,preventive,cln unit exterior,cleaned,A. Khan,4,closed
+WO-1367,2022-05-14,E-301,preventive,paint touch-up,done,P. Nair,3,closed
+WO-1130,2022-05-18,E-301,preventive,lube top-up,"greased, ok",M. Das,2,closed
+WO-1011,2022-05-23,FV-112,corrective,vlv stiff opn,adj positioner,K. Menon,6,closed
+WO-1254,2022-05-28,T-401,preventive,tag/label refresh,relabelled,M. Das,2,closed
+WO-1297,2022-06-03,P-101B,preventive,fastener/guard chk,"retightened, ok",S. Iyer,6,closed
+WO-1279,2022-06-07,C-501,preventive,tag/label refresh,relabelled,J. Patel,6,closed
+WO-1416,2022-06-08,FV-112,preventive,lube top-up,"greased, ok",K. Menon,4,closed
+WO-1568,2022-06-08,P-101B,preventive,cplg guard loose,cplg guard refitted,M. Das,3,closed
+WO-1104,2022-06-09,C-501,preventive,paint touch-up,done,N. Rao,1,closed
+WO-1389,2022-06-12,C-501,preventive,paint touch-up,done,S. Iyer,12,closed
+WO-1559,2022-06-15,E-301,preventive,6-monthly insp,"insp ok, within limit",P. Nair,1,closed
+WO-1329,2022-06-20,C-501,preventive,paint touch-up,done,J. Patel,6,closed
+WO-1196,2022-06-22,E-301,preventive,routine pm as per schedule,"completed, no abnrml found",P. Nair,0,closed
+WO-1223,2022-06-25,P-101A,preventive,tag/label refresh,relabelled,S. Iyer,8,closed
+WO-1585,2022-06-29,PT-108,preventive,housekeeping round,area cleaned,J. Patel,6,closed
+WO-1071,2022-07-01,P-101A,preventive,fastener/guard chk,"retightened, ok",N. Rao,4,closed
+WO-1122,2022-07-03,P-101B,preventive,routine pm - vibn chk,"vibn within limit, cln done",P. Nair,0,closed
+WO-1362,2022-07-04,C-501,preventive,tag/label refresh,relabelled,S. Iyer,8,closed
+WO-1113,2022-07-08,PT-108,preventive,paint touch-up,done,J. Patel,3,closed
+WO-1348,2022-07-14,P-101B,preventive,lube top-up,"greased, ok",S. Iyer,12,closed
+WO-1561,2022-07-14,P-101B,preventive,tag/label refresh,relabelled,V. Reddy,8,closed
+WO-1412,2022-07-19,FV-112,preventive,lube top-up,"greased, ok",K. Menon,12,closed
+WO-1041,2022-07-25,T-401,preventive,routine insp,no abnrml found,T. Bose,12,closed
+WO-1073,2022-07-25,P-101B,preventive,spares availability chk,verified in store,P. Nair,0,closed
+WO-1326,2022-07-26,E-301,preventive,lube top-up,"greased, ok",R. Sharma,12,closed
+WO-1440,2022-08-08,P-101B,preventive,gland leak minor,"tightnd gland, ok",J. Patel,1,closed
+WO-1522,2022-08-09,P-101B,preventive,lube top-up,"greased, ok",J. Patel,2,closed
+WO-1170,2022-08-12,FV-112,preventive,fastener/guard chk,"retightened, ok",K. Menon,12,closed
+WO-1528,2022-08-13,FV-112,preventive,tag/label refresh,relabelled,T. Bose,3,closed
+WO-1288,2022-08-14,FV-112,preventive,housekeeping round,area cleaned,A. Khan,2,closed
+WO-1291,2022-08-16,V-201,preventive,relief vlv insp due,relief vlv tested ok,S. Iyer,3,closed
+WO-1305,2022-08-22,C-501,preventive,housekeeping round,area cleaned,V. Reddy,2,closed
+WO-1555,2022-08-25,V-201,preventive,paint touch-up,done,M. Das,8,closed
+WO-1439,2022-08-26,T-401,preventive,6-monthly insp,"insp ok, within limit",P. Nair,1,closed
+WO-1403,2022-08-29,V-201,preventive,level gauge foggy,cln level gauge,N. Rao,2,closed
+WO-1099,2022-09-07,P-101A,preventive,paint touch-up,done,J. Patel,6,closed
+WO-1247,2022-09-12,P-101A,preventive,cln unit exterior,cleaned,V. Reddy,12,closed
+WO-1335,2022-09-12,C-501,preventive,housekeeping round,area cleaned,M. Das,4,closed
+WO-1600,2022-09-29,V-201,corrective,level gauge foggy,cln level gauge,V. Reddy,3,closed
+WO-1081,2022-10-04,P-101B,corrective,gland leak minor,"tightnd gland, ok",M. Das,2,closed
+WO-1331,2022-10-04,E-301,preventive,fastener/guard chk,"retightened, ok",P. Nair,4,closed
+WO-1337,2022-10-06,E-301,preventive,condition monitoring reading,"reading normal, filed",M. Das,0,closed
+WO-1162,2022-10-09,P-101B,preventive,fastener/guard chk,"retightened, ok",A. Khan,8,closed
+WO-1578,2022-10-10,FV-112,corrective,vlv stiff opn,adj positioner,S. Iyer,4,closed
+WO-1036,2022-10-12,E-301,preventive,routine pm as per schedule,"completed, no abnrml found",A. Khan,0,closed
+WO-1173,2022-10-15,C-501,corrective,oil leak minor,"tightnd flange, cln",N. Rao,6,closed
+WO-1387,2022-10-15,FV-112,preventive,paint touch-up,done,K. Menon,3,closed
+WO-1371,2022-10-23,V-201,preventive,fastener/guard chk,"retightened, ok",N. Rao,6,closed
+WO-1349,2022-10-26,PT-108,preventive,xmtr reading drift,recalib xmtr,J. Patel,4,closed
+WO-1231,2022-10-27,PT-108,preventive,cln unit exterior,cleaned,A. Khan,2,closed
+WO-1065,2022-10-28,T-401,corrective,routine insp,no abnrml found,S. Iyer,2,closed
+WO-1556,2022-10-30,FV-112,preventive,fastener/guard chk,"retightened, ok",A. Khan,0,closed
+WO-1052,2022-11-01,FV-112,preventive,paint touch-up,done,P. Nair,8,closed
+WO-1155,2022-11-02,C-501,corrective,hi vib alarm,"chkd algn, lubd brg",N. Rao,8,closed
+WO-1252,2022-11-02,FV-112,preventive,positioner drift,recalib positioner,P. Nair,12,closed
+WO-1404,2022-11-05,T-401,preventive,vent choke susp,"cln vent, ok",N. Rao,8,closed
+WO-1532,2022-11-06,E-301,preventive,dp hi susp choke,"chkd, cln plan raised",P. Nair,0,closed
+WO-1228,2022-11-11,P-101B,preventive,lube top-up,"greased, ok",K. Menon,8,closed
+WO-1112,2022-11-12,P-101B,preventive,housekeeping round,area cleaned,J. Patel,8,closed
+WO-1050,2022-11-17,E-301,preventive,spares availability chk,verified in store,N. Rao,0,closed
+WO-1102,2022-11-19,P-101B,corrective,"brg noise, minor vib","lubd brg, chkd algn",M. Das,0,closed
+WO-1479,2022-11-20,PT-108,corrective,abnrml reading susp,"chkd, recalib",P. Nair,1,closed
+WO-1127,2022-11-21,V-201,preventive,level gauge foggy,cln level gauge,A. Khan,8,closed
+WO-1174,2022-11-26,E-301,preventive,spares availability chk,verified in store,S. Iyer,1,closed
+WO-1396,2022-11-29,E-301,preventive,condition monitoring reading,"reading normal, filed",V. Reddy,4,closed
+WO-1426,2022-11-30,V-201,preventive,6-monthly insp,"insp ok, within limit",S. Iyer,8,closed
+WO-1377,2022-12-05,T-401,preventive,routine insp,no abnrml found,M. Das,6,closed
+WO-1388,2022-12-10,C-501,preventive,paint touch-up,done,J. Patel,12,closed
+WO-1486,2022-12-19,P-101A,preventive,routine pm as per schedule,"completed, no abnrml found",M. Das,0,closed
+WO-1495,2022-12-21,PT-108,corrective,abnrml reading susp,"chkd, recalib",N. Rao,1,closed
+WO-1562,2022-12-22,PT-108,preventive,routine pm as per schedule,"completed, no abnrml found",J. Patel,12,closed
+WO-1302,2022-12-25,P-101A,preventive,spares availability chk,verified in store,M. Das,8,closed
+WO-1003,2022-12-29,P-101A,corrective,"brg noise p101a hi vib, excsv vibn DE end","monitored, vibn trending up, seel chk advised",A. Khan,1,closed
+WO-1111,2023-01-01,C-501,preventive,spares availability chk,verified in store,V. Reddy,3,closed
+WO-1588,2023-01-03,E-301,preventive,6-monthly insp,"insp ok, within limit",K. Menon,0,closed
+WO-1018,2023-01-04,E-301,preventive,tag/label refresh,relabelled,T. Bose,3,closed
+WO-1256,2023-01-10,P-101B,preventive,cln unit exterior,cleaned,J. Patel,2,closed
+WO-1407,2023-01-11,T-401,preventive,vent choke susp,"cln vent, ok",J. Patel,12,closed
+WO-1004,2023-01-12,P-101A,corrective,"mech seel lkg p101a, seel failure, oil on baseplate","chng mech seel, algn chkd, brg inspd",N. Rao,8,closed
+WO-1172,2023-01-14,FV-112,preventive,tag/label refresh,relabelled,R. Sharma,0,closed
+WO-1299,2023-01-14,FV-112,preventive,condition monitoring reading,"reading normal, filed",S. Iyer,4,closed
+WO-1525,2023-01-15,PT-108,preventive,cln unit exterior,cleaned,P. Nair,12,closed
+WO-1037,2023-01-22,PT-108,preventive,6-monthly insp,"insp ok, within limit",J. Patel,3,closed
+WO-1168,2023-02-10,FV-112,preventive,housekeeping round,area cleaned,T. Bose,2,closed
+WO-1334,2023-02-10,T-401,preventive,routine insp,no abnrml found,A. Khan,6,closed
+WO-1142,2023-02-11,PT-108,preventive,housekeeping round,area cleaned,K. Menon,0,closed
+WO-1262,2023-02-11,E-301,preventive,channel gskt weep,tightnd bolts,M. Das,4,closed
+WO-1451,2023-02-12,P-101A,preventive,condition monitoring reading,"reading normal, filed",S. Iyer,12,closed
+WO-1222,2023-02-13,FV-112,corrective,vlv stiff opn,adj positioner,V. Reddy,1,closed
+WO-1226,2023-02-13,T-401,preventive,tag/label refresh,relabelled,A. Khan,8,closed
+WO-1458,2023-02-13,V-201,preventive,fastener/guard chk,"retightened, ok",N. Rao,4,closed
+WO-1303,2023-02-14,P-101A,preventive,condition monitoring reading,"reading normal, filed",P. Nair,12,closed
+WO-1164,2023-02-21,P-101A,preventive,routine pm as per schedule,"completed, no abnrml found",V. Reddy,6,closed
+WO-1454,2023-03-02,T-401,preventive,6-monthly insp,"insp ok, within limit",R. Sharma,12,closed
+WO-1094,2023-03-04,T-401,preventive,paint touch-up,done,K. Menon,8,closed
+WO-1057,2023-03-06,P-101A,preventive,condition monitoring reading,"reading normal, filed",A. Khan,2,closed
+WO-1078,2023-03-15,T-401,preventive,routine pm as per schedule,"completed, no abnrml found",P. Nair,3,closed
+WO-1184,2023-03-16,P-101B,preventive,routine pm as per schedule,"completed, no abnrml found",J. Patel,1,closed
+WO-1117,2023-03-20,FV-112,preventive,6-monthly insp,"insp ok, within limit",N. Rao,6,closed
+WO-1119,2023-03-20,PT-108,preventive,fastener/guard chk,"retightened, ok",P. Nair,3,closed
+WO-1411,2023-03-24,PT-108,preventive,routine pm as per schedule,"completed, no abnrml found",J. Patel,6,closed
+WO-1245,2023-03-27,V-201,preventive,lube top-up,"greased, ok",T. Bose,8,closed
+WO-1490,2023-03-28,PT-108,preventive,lube top-up,"greased, ok",K. Menon,3,closed
+WO-1105,2023-03-31,V-201,corrective,relief vlv insp due,relief vlv tested ok,N. Rao,8,closed
+WO-1205,2023-04-02,T-401,preventive,lube top-up,"greased, ok",K. Menon,6,closed
+WO-1443,2023-04-03,FV-112,corrective,vlv stiff opn,adj positioner,A. Khan,3,closed
+WO-1285,2023-04-05,V-201,preventive,tag/label refresh,relabelled,P. Nair,3,closed
+WO-1332,2023-04-11,E-301,preventive,housekeeping round,area cleaned,J. Patel,6,closed
+WO-1259,2023-04-14,T-401,preventive,vent choke susp,"cln vent, ok",A. Khan,6,closed
+WO-1141,2023-04-19,C-501,preventive,paint touch-up,done,A. Khan,2,closed
+WO-1143,2023-04-24,C-501,preventive,fastener/guard chk,"retightened, ok",A. Khan,8,closed
+WO-1571,2023-04-29,T-401,preventive,condition monitoring reading,"reading normal, filed",P. Nair,12,closed
+WO-1076,2023-04-30,FV-112,preventive,tag/label refresh,relabelled,K. Menon,4,closed
+WO-1176,2023-05-01,V-201,preventive,fastener/guard chk,"retightened, ok",K. Menon,2,closed
+WO-1463,2023-05-02,PT-108,preventive,housekeeping round,area cleaned,N. Rao,0,closed
+WO-1345,2023-05-09,FV-112,preventive,lube top-up,"greased, ok",S. Iyer,12,closed
+WO-1537,2023-05-11,P-101A,preventive,routine pm as per schedule,"completed, no abnrml found",N. Rao,3,closed
+WO-1419,2023-05-12,FV-112,preventive,tag/label refresh,relabelled,N. Rao,8,closed
+WO-1301,2023-05-23,V-201,preventive,spares availability chk,verified in store,N. Rao,0,closed
+WO-1466,2023-05-23,FV-112,preventive,fastener/guard chk,"retightened, ok",T. Bose,2,closed
+WO-1035,2023-05-24,P-101B,preventive,lube top-up,"greased, ok",R. Sharma,3,closed
+WO-1152,2023-05-28,P-101B,preventive,tag/label refresh,relabelled,T. Bose,4,closed
+WO-1374,2023-06-06,T-401,preventive,routine pm as per schedule,"completed, no abnrml found",K. Menon,6,closed
+WO-1154,2023-06-07,V-201,preventive,housekeeping round,area cleaned,V. Reddy,8,closed
+WO-1072,2023-06-08,P-101A,preventive,tag/label refresh,relabelled,V. Reddy,8,closed
+WO-1068,2023-06-17,E-301,preventive,housekeeping round,area cleaned,P. Nair,3,closed
+WO-1244,2023-06-17,P-101B,preventive,cln unit exterior,cleaned,P. Nair,8,closed
+WO-1211,2023-06-18,C-501,preventive,lube top-up,"greased, ok",T. Bose,6,closed
+WO-1550,2023-06-20,T-401,preventive,tag/label refresh,relabelled,T. Bose,8,closed
+WO-1442,2023-06-21,T-401,preventive,paint touch-up,done,J. Patel,2,closed
+WO-1413,2023-06-25,T-401,preventive,lube top-up,"greased, ok",T. Bose,1,closed
+WO-1039,2023-06-26,P-101B,preventive,tag/label refresh,relabelled,K. Menon,8,closed
+WO-1533,2023-06-27,E-301,preventive,tag/label refresh,relabelled,S. Iyer,2,closed
+WO-1009,2023-07-01,P-101A,preventive,pm - seel & brg condition chk,"insp ok, lubd",T. Bose,8,closed
+WO-1268,2023-07-02,PT-108,preventive,routine pm as per schedule,"completed, no abnrml found",A. Khan,6,closed
+WO-1171,2023-07-06,P-101B,preventive,spares availability chk,verified in store,N. Rao,4,closed
+WO-1583,2023-07-09,E-301,preventive,routine pm as per schedule,"completed, no abnrml found",M. Das,4,closed
+WO-1417,2023-07-10,T-401,preventive,lube top-up,"greased, ok",P. Nair,3,closed
+WO-1109,2023-07-12,T-401,preventive,routine insp,no abnrml found,J. Patel,2,closed
+WO-1283,2023-07-12,V-201,preventive,paint touch-up,done,K. Menon,0,closed
+WO-1315,2023-07-13,P-101A,preventive,6-monthly insp,"insp ok, within limit",T. Bose,4,closed
+WO-1030,2023-07-14,PT-108,preventive,lube top-up,"greased, ok",P. Nair,3,closed
+WO-1281,2023-07-15,P-101A,preventive,tag/label refresh,relabelled,T. Bose,2,closed
+WO-1423,2023-07-18,PT-108,preventive,tag/label refresh,relabelled,A. Khan,3,closed
+WO-1314,2023-07-20,V-201,corrective,level gauge foggy,cln level gauge,R. Sharma,8,closed
+WO-1276,2023-07-23,PT-108,corrective,abnrml reading susp,"chkd, recalib",T. Bose,4,closed
+WO-1216,2023-07-28,T-401,preventive,cln unit exterior,cleaned,P. Nair,6,closed
+WO-1284,2023-08-01,V-201,preventive,paint touch-up,done,J. Patel,1,closed
+WO-1601,2023-08-01,FV-112,preventive,paint touch-up,done,P. Nair,4,closed
+WO-1521,2023-08-02,E-301,preventive,tag/label refresh,relabelled,A. Khan,4,closed
+WO-1375,2023-08-10,T-401,preventive,fastener/guard chk,"retightened, ok",S. Iyer,12,closed
+WO-1507,2023-08-10,P-101A,corrective,"brg noise, minor vib","lubd brg, chkd algn",P. Nair,1,closed
+WO-1363,2023-08-13,PT-108,preventive,abnrml reading susp,"chkd, recalib",K. Menon,1,closed
+WO-1543,2023-08-14,E-301,preventive,cln unit exterior,cleaned,P. Nair,4,closed
+WO-1067,2023-08-23,FV-112,preventive,lube top-up,"greased, ok",R. Sharma,12,closed
+WO-1524,2023-08-23,T-401,preventive,vent choke susp,"cln vent, ok",K. Menon,2,closed
+WO-1474,2023-08-24,V-201,preventive,6-monthly insp,"insp ok, within limit",A. Khan,1,closed
+WO-1151,2023-08-25,E-301,preventive,cln unit exterior,cleaned,M. Das,2,closed
+WO-1445,2023-08-25,T-401,preventive,spares availability chk,verified in store,K. Menon,2,closed
+WO-1083,2023-08-26,T-401,corrective,routine insp,no abnrml found,J. Patel,8,closed
+WO-1237,2023-08-27,P-101B,preventive,condition monitoring reading,"reading normal, filed",J. Patel,0,closed
+WO-1241,2023-09-02,PT-108,preventive,fastener/guard chk,"retightened, ok",K. Menon,6,closed
+WO-1414,2023-09-03,PT-108,preventive,xmtr reading drift,recalib xmtr,A. Khan,3,closed
+WO-1093,2023-09-06,P-101A,preventive,tag/label refresh,relabelled,N. Rao,0,closed
+WO-1045,2023-09-08,P-101A,preventive,routine pm as per schedule,"completed, no abnrml found",P. Nair,12,closed
+WO-1317,2023-09-15,P-101B,preventive,lube top-up,"greased, ok",V. Reddy,6,closed
+WO-1382,2023-09-21,E-301,preventive,6-monthly insp,"insp ok, within limit",M. Das,6,closed
+WO-1069,2023-09-25,E-301,preventive,6-monthly insp,"insp ok, within limit",V. Reddy,4,closed
+WO-1318,2023-10-01,PT-108,corrective,xmtr reading drift,recalib xmtr,T. Bose,0,closed
+WO-1462,2023-10-04,C-501,preventive,lube top-up,"greased, ok",T. Bose,4,closed
+WO-1148,2023-10-14,FV-112,preventive,condition monitoring reading,"reading normal, filed",A. Khan,3,closed
+WO-1165,2023-10-22,T-401,preventive,condition monitoring reading,"reading normal, filed",N. Rao,2,closed
+WO-1204,2023-10-26,T-401,preventive,6-monthly insp,"insp ok, within limit",V. Reddy,12,closed
+WO-1150,2023-10-29,FV-112,preventive,fastener/guard chk,"retightened, ok",J. Patel,12,closed
+WO-1432,2023-10-30,PT-108,preventive,abnrml reading susp,"chkd, recalib",A. Khan,1,closed
+WO-1500,2023-10-31,T-401,preventive,6-monthly insp,"insp ok, within limit",V. Reddy,4,closed
+WO-1579,2023-11-01,C-501,preventive,oil leak minor,"tightnd flange, cln",N. Rao,1,closed
+WO-1186,2023-11-06,PT-108,preventive,condition monitoring reading,"reading normal, filed",N. Rao,2,closed
+WO-1508,2023-11-07,E-301,preventive,6-monthly insp,"insp ok, within limit",J. Patel,0,closed
+WO-1033,2023-11-14,FV-112,preventive,spares availability chk,verified in store,M. Das,3,closed
+WO-1246,2023-11-15,PT-108,corrective,xmtr reading drift,recalib xmtr,T. Bose,6,closed
+WO-1366,2023-11-16,C-501,preventive,condition monitoring reading,"reading normal, filed",T. Bose,8,closed
+WO-1118,2023-11-19,C-501,preventive,paint touch-up,done,T. Bose,6,closed
+WO-1087,2023-11-21,C-501,preventive,condition monitoring reading,"reading normal, filed",T. Bose,12,closed
+WO-1022,2023-11-25,E-301,corrective,channel gskt weep,tightnd bolts,N. Rao,8,closed
+WO-1265,2023-11-27,E-301,preventive,fastener/guard chk,"retightened, ok",R. Sharma,6,closed
+WO-1471,2023-11-27,T-401,preventive,6-monthly insp,"insp ok, within limit",A. Khan,1,closed
+WO-1408,2023-12-02,E-301,preventive,tag/label refresh,relabelled,S. Iyer,8,closed
+WO-1095,2023-12-10,E-301,preventive,fastener/guard chk,"retightened, ok",J. Patel,0,closed
+WO-1140,2023-12-10,FV-112,preventive,spares availability chk,verified in store,J. Patel,1,closed
+WO-1034,2023-12-15,FV-112,preventive,paint touch-up,done,T. Bose,12,closed
+WO-1549,2023-12-15,FV-112,preventive,vlv stiff opn,adj positioner,K. Menon,2,closed
+WO-1240,2023-12-17,P-101A,preventive,housekeeping round,area cleaned,T. Bose,2,closed
+WO-1455,2023-12-17,FV-112,preventive,lube top-up,"greased, ok",A. Khan,3,closed
+WO-1089,2023-12-18,C-501,preventive,fastener/guard chk,"retightened, ok",A. Khan,4,closed
+WO-1253,2023-12-20,E-301,preventive,spares availability chk,verified in store,J. Patel,4,closed
+WO-1357,2023-12-22,V-201,preventive,condition monitoring reading,"reading normal, filed",A. Khan,3,closed
+WO-1079,2023-12-23,T-401,preventive,vent choke susp,"cln vent, ok",M. Das,12,closed
+WO-1128,2023-12-24,E-301,preventive,channel gskt weep,tightnd bolts,P. Nair,8,closed
+WO-1188,2023-12-26,P-101A,preventive,6-monthly insp,"insp ok, within limit",J. Patel,3,closed
+WO-1358,2023-12-30,C-501,preventive,condition monitoring reading,"reading normal, filed",R. Sharma,12,closed
+WO-1116,2024-01-04,C-501,preventive,housekeeping round,area cleaned,R. Sharma,1,closed
+WO-1514,2024-01-07,P-101B,preventive,cln unit exterior,cleaned,J. Patel,6,closed
+WO-1131,2024-01-09,P-101B,preventive,tag/label refresh,relabelled,N. Rao,12,closed
+WO-1016,2024-01-15,P-101B,preventive,"brg noise, minor vib","lubd brg, chkd algn",V. Reddy,2,closed
+WO-1027,2024-01-16,P-101B,preventive,cln unit exterior,cleaned,R. Sharma,4,closed
+WO-1433,2024-01-19,V-201,preventive,paint touch-up,done,M. Das,12,closed
+WO-1158,2024-01-22,P-101B,preventive,cplg guard loose,cplg guard refitted,R. Sharma,2,closed
+WO-1503,2024-01-22,FV-112,preventive,condition monitoring reading,"reading normal, filed",R. Sharma,6,closed
+WO-1053,2024-01-23,V-201,preventive,fastener/guard chk,"retightened, ok",V. Reddy,1,closed
+WO-1418,2024-01-24,C-501,preventive,6-monthly insp,"insp ok, within limit",A. Khan,2,closed
+WO-1397,2024-01-27,T-401,preventive,tag/label refresh,relabelled,N. Rao,3,closed
+WO-1523,2024-01-31,P-101B,preventive,routine pm - vibn chk,"vibn within limit, cln done",R. Sharma,2,closed
+WO-1144,2024-02-02,P-101A,preventive,condition monitoring reading,"reading normal, filed",K. Menon,0,closed
+WO-1042,2024-02-03,V-201,preventive,fastener/guard chk,"retightened, ok",M. Das,1,closed
+WO-1431,2024-02-04,E-301,preventive,tag/label refresh,relabelled,N. Rao,2,closed
+WO-1085,2024-02-07,E-301,preventive,condition monitoring reading,"reading normal, filed",R. Sharma,3,closed
+WO-1351,2024-02-09,E-301,preventive,lube top-up,"greased, ok",P. Nair,2,closed
+WO-1384,2024-02-10,FV-112,preventive,housekeeping round,area cleaned,A. Khan,12,closed
+WO-1307,2024-02-11,V-201,preventive,relief vlv insp due,relief vlv tested ok,A. Khan,4,closed
+WO-1591,2024-02-11,T-401,preventive,vent choke susp,"cln vent, ok",P. Nair,8,closed
+WO-1310,2024-02-12,E-301,corrective,channel gskt weep,tightnd bolts,J. Patel,4,closed
+WO-1267,2024-02-18,P-101B,preventive,"brg noise, minor vib","lubd brg, chkd algn",R. Sharma,8,closed
+WO-1139,2024-02-19,FV-112,preventive,cln unit exterior,cleaned,T. Bose,12,closed
+WO-1560,2024-02-20,C-501,corrective,oil leak minor,"tightnd flange, cln",J. Patel,4,closed
+WO-1599,2024-02-20,FV-112,preventive,vlv stiff opn,adj positioner,S. Iyer,4,closed
+WO-1531,2024-02-22,P-101A,preventive,routine pm - vibn chk,"vibn within limit, cln done",T. Bose,6,closed
+WO-1038,2024-02-24,V-201,preventive,level gauge foggy,cln level gauge,K. Menon,3,closed
+WO-1273,2024-02-25,FV-112,preventive,condition monitoring reading,"reading normal, filed",P. Nair,0,closed
+WO-1322,2024-02-28,C-501,preventive,fastener/guard chk,"retightened, ok",R. Sharma,6,closed
+WO-1032,2024-02-29,P-101B,preventive,gland leak minor,"tightnd gland, ok",T. Bose,2,closed
+WO-1401,2024-02-29,P-101A,preventive,spares availability chk,verified in store,P. Nair,0,closed
+WO-1238,2024-03-01,C-501,preventive,hi vib alarm,"chkd algn, lubd brg",T. Bose,2,closed
+WO-1399,2024-03-01,T-401,preventive,condition monitoring reading,"reading normal, filed",R. Sharma,0,closed
+WO-1197,2024-03-02,V-201,corrective,relief vlv insp due,relief vlv tested ok,J. Patel,6,closed
+WO-1566,2024-03-02,C-501,preventive,6-monthly insp,"insp ok, within limit",P. Nair,1,closed
+WO-1048,2024-03-03,PT-108,preventive,spares availability chk,verified in store,T. Bose,2,closed
+WO-1339,2024-03-04,V-201,preventive,housekeeping round,area cleaned,M. Das,4,closed
+WO-1421,2024-03-08,FV-112,preventive,6-monthly insp,"insp ok, within limit",V. Reddy,2,closed
+WO-1427,2024-03-08,T-401,preventive,spares availability chk,verified in store,N. Rao,8,closed
+WO-1527,2024-03-08,C-501,preventive,condition monitoring reading,"reading normal, filed",R. Sharma,1,closed
+WO-1005,2024-03-12,P-101A,corrective,"mech seel lkg p101a, seel failure, oil on baseplate","chng mech seel, algn chkd, brg inspd",R. Sharma,0,closed
+WO-1044,2024-03-12,E-301,preventive,housekeeping round,area cleaned,M. Das,8,closed
+WO-1218,2024-03-21,FV-112,preventive,tag/label refresh,relabelled,N. Rao,12,closed
+WO-1220,2024-03-23,P-101B,preventive,spares availability chk,verified in store,T. Bose,4,closed
+WO-1115,2024-03-27,E-301,preventive,tag/label refresh,relabelled,T. Bose,3,closed
+WO-1286,2024-04-18,P-101B,preventive,cln unit exterior,cleaned,T. Bose,8,closed
+WO-1258,2024-04-24,P-101A,preventive,tag/label refresh,relabelled,V. Reddy,3,closed
+WO-1501,2024-04-24,P-101B,preventive,lube top-up,"greased, ok",R. Sharma,2,closed
+WO-1311,2024-05-01,C-501,preventive,tag/label refresh,relabelled,J. Patel,3,closed
+WO-1108,2024-05-02,T-401,preventive,lube top-up,"greased, ok",V. Reddy,0,closed
+WO-1210,2024-05-05,FV-112,preventive,spares availability chk,verified in store,M. Das,2,closed
+WO-1023,2024-05-09,PT-108,preventive,cln unit exterior,cleaned,J. Patel,1,closed
+WO-1070,2024-05-09,P-101B,preventive,routine pm - vibn chk,"vibn within limit, cln done",K. Menon,6,closed
+WO-1489,2024-05-13,FV-112,preventive,lube top-up,"greased, ok",M. Das,2,closed
+WO-1080,2024-05-21,V-201,preventive,fastener/guard chk,"retightened, ok",N. Rao,6,closed
+WO-1567,2024-05-24,T-401,corrective,routine insp,no abnrml found,N. Rao,2,closed
+WO-1328,2024-05-28,C-501,corrective,hi vib alarm,"chkd algn, lubd brg",M. Das,6,closed
+WO-1493,2024-06-06,P-101A,preventive,paint touch-up,done,T. Bose,4,closed
+WO-1441,2024-06-15,FV-112,preventive,housekeeping round,area cleaned,V. Reddy,8,closed
+WO-1025,2024-06-18,T-401,preventive,housekeeping round,area cleaned,P. Nair,0,closed
+WO-1202,2024-06-21,PT-108,preventive,spares availability chk,verified in store,P. Nair,12,closed
+WO-1215,2024-06-21,V-201,preventive,relief vlv insp due,relief vlv tested ok,M. Das,8,closed
+WO-1120,2024-07-02,P-101B,preventive,routine pm - vibn chk,"vibn within limit, cln done",S. Iyer,3,closed
+WO-1394,2024-07-02,P-101A,preventive,fastener/guard chk,"retightened, ok",P. Nair,0,closed
+WO-1010,2024-07-05,P-101A,preventive,pm - seel & brg condition chk,"insp ok, lubd",M. Das,12,closed
+WO-1029,2024-07-09,V-201,preventive,cln unit exterior,cleaned,T. Bose,0,closed
+WO-1370,2024-07-10,E-301,preventive,channel gskt weep,tightnd bolts,M. Das,0,closed
+WO-1194,2024-07-11,FV-112,corrective,vlv stiff opn,adj positioner,P. Nair,2,closed
+WO-1043,2024-07-12,C-501,preventive,hi vib alarm,"chkd algn, lubd brg",R. Sharma,1,closed
+WO-1361,2024-07-13,P-101A,preventive,lube top-up,"greased, ok",R. Sharma,1,closed
+WO-1092,2024-07-16,P-101B,preventive,paint touch-up,done,J. Patel,8,closed
+WO-1402,2024-07-17,P-101B,preventive,fastener/guard chk,"retightened, ok",N. Rao,0,closed
+WO-1189,2024-07-20,PT-108,preventive,paint touch-up,done,V. Reddy,0,closed
+WO-1553,2024-07-25,T-401,preventive,lube top-up,"greased, ok",A. Khan,6,closed
+WO-1354,2024-07-29,C-501,preventive,oil leak minor,"tightnd flange, cln",J. Patel,3,closed
+WO-1393,2024-08-03,C-501,preventive,condition monitoring reading,"reading normal, filed",K. Menon,0,closed
+WO-1436,2024-08-04,V-201,corrective,relief vlv insp due,relief vlv tested ok,S. Iyer,6,closed
+WO-1123,2024-08-07,V-201,preventive,routine pm as per schedule,"completed, no abnrml found",P. Nair,2,closed
+WO-1446,2024-08-10,C-501,preventive,cln unit exterior,cleaned,S. Iyer,12,closed
+WO-1373,2024-08-14,T-401,preventive,routine pm as per schedule,"completed, no abnrml found",N. Rao,2,closed
+WO-1592,2024-08-23,P-101B,preventive,paint touch-up,done,N. Rao,4,closed
+WO-1208,2024-08-24,P-101A,preventive,condition monitoring reading,"reading normal, filed",V. Reddy,1,closed
+WO-1359,2024-08-28,V-201,preventive,housekeeping round,area cleaned,R. Sharma,12,closed
+WO-1563,2024-08-29,FV-112,preventive,fastener/guard chk,"retightened, ok",R. Sharma,2,closed
+WO-1051,2024-08-31,P-101B,preventive,spares availability chk,verified in store,T. Bose,6,closed
+WO-1107,2024-09-02,FV-112,corrective,vlv stiff opn,adj positioner,R. Sharma,6,closed
+WO-1214,2024-09-02,PT-108,preventive,cln unit exterior,cleaned,K. Menon,1,closed
+WO-1457,2024-09-10,V-201,corrective,relief vlv insp due,relief vlv tested ok,V. Reddy,4,closed
+WO-1574,2024-09-14,T-401,preventive,housekeeping round,area cleaned,N. Rao,12,closed
+WO-1292,2024-09-15,C-501,preventive,condition monitoring reading,"reading normal, filed",V. Reddy,12,closed
+WO-1452,2024-09-15,C-501,preventive,lube top-up,"greased, ok",A. Khan,4,closed
+WO-1124,2024-09-18,C-501,preventive,routine pm as per schedule,"completed, no abnrml found",P. Nair,12,closed
+WO-1126,2024-09-24,P-101B,preventive,cplg guard loose,cplg guard refitted,R. Sharma,2,closed
+WO-1324,2024-09-25,C-501,preventive,spares availability chk,verified in store,M. Das,0,closed
+WO-1047,2024-09-29,E-301,preventive,routine pm as per schedule,"completed, no abnrml found",T. Bose,0,closed
+WO-1510,2024-10-02,PT-108,preventive,lube top-up,"greased, ok",A. Khan,2,closed
+WO-1323,2024-10-08,PT-108,preventive,tag/label refresh,relabelled,P. Nair,0,closed
+WO-1386,2024-10-09,V-201,preventive,condition monitoring reading,"reading normal, filed",N. Rao,8,closed
+WO-1181,2024-10-10,C-501,preventive,fastener/guard chk,"retightened, ok",K. Menon,6,closed
+WO-1540,2024-10-13,P-101B,preventive,tag/label refresh,relabelled,A. Khan,6,closed
+WO-1169,2024-10-16,P-101B,preventive,paint touch-up,done,P. Nair,8,closed
+WO-1534,2024-10-24,E-301,preventive,paint touch-up,done,R. Sharma,6,closed
+WO-1097,2024-10-25,V-201,corrective,relief vlv insp due,relief vlv tested ok,N. Rao,0,closed
+WO-1300,2024-10-25,P-101B,preventive,cln unit exterior,cleaned,N. Rao,2,closed
+WO-1114,2024-11-02,PT-108,preventive,abnrml reading susp,"chkd, recalib",P. Nair,0,closed
+WO-1264,2024-11-04,P-101B,preventive,housekeeping round,area cleaned,T. Bose,0,closed
+WO-1379,2024-11-16,FV-112,preventive,spares availability chk,verified in store,R. Sharma,1,closed
+WO-1013,2024-11-18,P-101B,preventive,paint touch-up,done,P. Nair,0,closed
+WO-1481,2024-11-24,P-101A,preventive,routine pm - vibn chk,"vibn within limit, cln done",T. Bose,3,closed
+WO-1129,2024-11-30,FV-112,preventive,routine pm as per schedule,"completed, no abnrml found",A. Khan,3,closed
+WO-1330,2024-12-01,PT-108,preventive,fastener/guard chk,"retightened, ok",J. Patel,3,closed
+WO-1456,2024-12-01,E-301,corrective,channel gskt weep,tightnd bolts,K. Menon,2,closed
+WO-1082,2024-12-03,P-101A,preventive,housekeeping round,area cleaned,A. Khan,12,closed
+WO-1429,2024-12-06,P-101B,preventive,routine pm - vibn chk,"vibn within limit, cln done",R. Sharma,8,closed
+WO-1198,2024-12-11,P-101B,preventive,6-monthly insp,"insp ok, within limit",R. Sharma,4,closed
+WO-1280,2024-12-11,C-501,preventive,paint touch-up,done,K. Menon,4,closed
+WO-1368,2024-12-11,P-101B,preventive,tag/label refresh,relabelled,R. Sharma,3,closed
+WO-1187,2024-12-12,T-401,preventive,housekeeping round,area cleaned,K. Menon,4,closed
+WO-1526,2024-12-15,V-201,preventive,spares availability chk,verified in store,M. Das,4,closed
+WO-1217,2024-12-17,P-101B,preventive,gland leak minor,"tightnd gland, ok",R. Sharma,1,closed
+WO-1227,2024-12-17,P-101A,corrective,gland leak minor,"tightnd gland, ok",J. Patel,6,closed
+WO-1075,2024-12-28,T-401,preventive,paint touch-up,done,V. Reddy,1,closed
+WO-1467,2025-01-03,C-501,preventive,hi vib alarm,"chkd algn, lubd brg",J. Patel,0,closed
+WO-1461,2025-01-06,C-501,preventive,fastener/guard chk,"retightened, ok",K. Menon,8,closed
+WO-1477,2025-01-07,C-501,preventive,6-monthly insp,"insp ok, within limit",S. Iyer,8,closed
+WO-1487,2025-01-08,P-101A,corrective,cplg guard loose,cplg guard refitted,T. Bose,8,closed
+WO-1437,2025-01-10,T-401,corrective,routine insp,no abnrml found,S. Iyer,2,closed
+WO-1422,2025-01-17,T-401,corrective,vent choke susp,"cln vent, ok",J. Patel,3,closed
+WO-1602,2025-01-20,C-501,preventive,oil leak minor,"tightnd flange, cln",N. Rao,1,closed
+WO-1167,2025-01-27,C-501,preventive,hi vib alarm,"chkd algn, lubd brg",P. Nair,12,closed
+WO-1483,2025-01-27,T-401,preventive,housekeeping round,area cleaned,N. Rao,1,closed
+WO-1598,2025-01-28,PT-108,corrective,xmtr reading drift,recalib xmtr,J. Patel,6,closed
+WO-1263,2025-01-29,P-101B,preventive,tag/label refresh,relabelled,N. Rao,12,closed
+WO-1488,2025-02-01,T-401,preventive,lube top-up,"greased, ok",T. Bose,2,closed
+WO-1400,2025-02-10,V-201,preventive,tag/label refresh,relabelled,V. Reddy,1,closed
+WO-1040,2025-02-13,C-501,corrective,hi vib alarm,"chkd algn, lubd brg",A. Khan,0,closed
+WO-1589,2025-02-15,P-101A,preventive,cln unit exterior,cleaned,S. Iyer,0,closed
+WO-1134,2025-02-16,T-401,preventive,6-monthly insp,"insp ok, within limit",S. Iyer,4,closed
+WO-1149,2025-02-16,P-101B,preventive,lube top-up,"greased, ok",S. Iyer,12,closed
+WO-1383,2025-02-18,FV-112,preventive,condition monitoring reading,"reading normal, filed",V. Reddy,4,closed
+WO-1110,2025-02-22,T-401,preventive,condition monitoring reading,"reading normal, filed",P. Nair,12,closed
+WO-1398,2025-02-28,E-301,preventive,lube top-up,"greased, ok",R. Sharma,1,closed
+WO-1554,2025-02-28,C-501,preventive,tag/label refresh,relabelled,S. Iyer,8,closed
+WO-1596,2025-03-04,PT-108,preventive,routine pm as per schedule,"completed, no abnrml found",J. Patel,4,closed
+WO-1372,2025-03-14,PT-108,preventive,cln unit exterior,cleaned,T. Bose,3,closed
+WO-1278,2025-03-15,PT-108,preventive,paint touch-up,done,P. Nair,4,closed
+WO-1046,2025-03-17,FV-112,preventive,condition monitoring reading,"reading normal, filed",J. Patel,2,closed
+WO-1266,2025-03-22,E-301,preventive,cln unit exterior,cleaned,A. Khan,6,closed
+WO-1470,2025-03-22,PT-108,preventive,paint touch-up,done,S. Iyer,0,closed
+WO-1064,2025-03-27,P-101A,corrective,gland leak minor,"tightnd gland, ok",A. Khan,6,closed
+WO-1086,2025-03-29,P-101B,preventive,housekeeping round,area cleaned,T. Bose,6,closed
+WO-1103,2025-04-02,V-201,preventive,housekeeping round,area cleaned,A. Khan,3,closed
+WO-1138,2025-04-11,FV-112,preventive,6-monthly insp,"insp ok, within limit",N. Rao,0,closed
+WO-1251,2025-04-16,V-201,preventive,relief vlv insp due,relief vlv tested ok,M. Das,12,closed
+WO-1333,2025-04-16,FV-112,preventive,spares availability chk,verified in store,T. Bose,8,closed
+WO-1518,2025-04-17,PT-108,preventive,routine pm as per schedule,"completed, no abnrml found",P. Nair,4,closed
+WO-1077,2025-04-18,V-201,preventive,tag/label refresh,relabelled,S. Iyer,4,closed
+WO-1282,2025-04-19,P-101A,preventive,spares availability chk,verified in store,J. Patel,0,closed
+WO-1295,2025-04-23,V-201,preventive,relief vlv insp due,relief vlv tested ok,T. Bose,6,closed
+WO-1569,2025-04-30,V-201,preventive,lube top-up,"greased, ok",K. Menon,3,closed
+WO-1074,2025-05-07,T-401,preventive,condition monitoring reading,"reading normal, filed",M. Das,6,closed
+WO-1206,2025-05-07,FV-112,preventive,cln unit exterior,cleaned,J. Patel,1,closed
+WO-1006,2025-05-09,P-101A,corrective,"brg noise p101a hi vib, excsv vibn DE end","monitored, vibn trending up, seel chk advised",M. Das,3,closed
+WO-1352,2025-05-14,T-401,preventive,fastener/guard chk,"retightened, ok",A. Khan,4,closed
+WO-1106,2025-05-15,T-401,preventive,routine insp,no abnrml found,M. Das,1,closed
+WO-1327,2025-05-15,PT-108,preventive,tag/label refresh,relabelled,M. Das,8,closed
+WO-1576,2025-05-15,P-101A,preventive,paint touch-up,done,M. Das,0,closed
+WO-1548,2025-05-20,P-101A,preventive,6-monthly insp,"insp ok, within limit",A. Khan,6,closed
+WO-1007,2025-05-21,P-101A,corrective,"mech seel lkg p101a, seel failure, oil on baseplate","chng mech seel, algn chkd, brg inspd",T. Bose,0,closed
+WO-1444,2025-05-21,FV-112,preventive,paint touch-up,done,S. Iyer,8,closed
+WO-1542,2025-05-21,PT-108,preventive,condition monitoring reading,"reading normal, filed",N. Rao,6,closed
+WO-1091,2025-05-22,V-201,preventive,tag/label refresh,relabelled,S. Iyer,3,closed
+WO-1163,2025-05-22,P-101B,preventive,"brg noise, minor vib","lubd brg, chkd algn",P. Nair,0,closed
+WO-1464,2025-05-29,P-101B,corrective,cplg guard loose,cplg guard refitted,V. Reddy,1,closed
+WO-1136,2025-06-03,C-501,preventive,fastener/guard chk,"retightened, ok",K. Menon,4,closed
+WO-1183,2025-06-05,E-301,preventive,housekeeping round,area cleaned,P. Nair,8,closed
+WO-1428,2025-06-06,T-401,preventive,paint touch-up,done,T. Bose,1,closed
+WO-1017,2025-06-07,PT-108,preventive,fastener/guard chk,"retightened, ok",A. Khan,2,closed
+WO-1544,2025-06-07,V-201,preventive,routine pm as per schedule,"completed, no abnrml found",N. Rao,8,closed
+WO-1213,2025-06-09,FV-112,preventive,fastener/guard chk,"retightened, ok",P. Nair,6,closed
+WO-1287,2025-06-11,P-101B,preventive,fastener/guard chk,"retightened, ok",J. Patel,3,closed
+WO-1132,2025-06-17,FV-112,preventive,fastener/guard chk,"retightened, ok",P. Nair,12,closed
+WO-1449,2025-06-24,T-401,preventive,tag/label refresh,relabelled,J. Patel,12,closed
+WO-1200,2025-06-28,T-401,preventive,housekeeping round,area cleaned,J. Patel,1,closed
+WO-1590,2025-06-29,E-301,preventive,fastener/guard chk,"retightened, ok",P. Nair,8,closed
+WO-1409,2025-06-30,P-101B,corrective,routine pm - vibn chk,"vibn within limit, cln done",A. Khan,1,closed
+WO-1239,2025-07-02,P-101A,preventive,paint touch-up,done,A. Khan,2,closed
+WO-1059,2025-07-09,FV-112,preventive,6-monthly insp,"insp ok, within limit",V. Reddy,3,closed
+WO-1480,2025-07-16,E-301,preventive,spares availability chk,verified in store,N. Rao,4,closed
+WO-1434,2025-07-18,PT-108,preventive,housekeeping round,area cleaned,J. Patel,6,closed
+WO-1096,2025-07-23,T-401,preventive,tag/label refresh,relabelled,S. Iyer,12,closed
+WO-1378,2025-07-23,P-101B,preventive,routine pm - vibn chk,"vibn within limit, cln done",M. Das,0,closed
+WO-1570,2025-07-29,V-201,preventive,level gauge foggy,cln level gauge,A. Khan,1,closed
+WO-1541,2025-08-08,FV-112,preventive,cln unit exterior,cleaned,K. Menon,12,closed
+WO-1494,2025-08-10,V-201,preventive,fastener/guard chk,"retightened, ok",A. Khan,0,closed
+WO-1269,2025-08-14,E-301,corrective,dp hi susp choke,"chkd, cln plan raised",V. Reddy,2,closed
+WO-1346,2025-08-17,FV-112,preventive,routine pm as per schedule,"completed, no abnrml found",V. Reddy,4,closed
+WO-1321,2025-08-23,V-201,preventive,spares availability chk,verified in store,P. Nair,6,closed
+WO-1410,2025-08-23,FV-112,preventive,cln unit exterior,cleaned,K. Menon,6,closed
+WO-1504,2025-08-23,E-301,preventive,fastener/guard chk,"retightened, ok",N. Rao,3,closed
+WO-1336,2025-08-26,FV-112,preventive,spares availability chk,verified in store,N. Rao,3,closed
+WO-1580,2025-08-26,E-301,preventive,tag/label refresh,relabelled,J. Patel,6,closed
+WO-1381,2025-08-27,P-101A,preventive,6-monthly insp,"insp ok, within limit",A. Khan,12,closed
+WO-1058,2025-08-29,FV-112,preventive,lube top-up,"greased, ok",T. Bose,2,closed
+WO-1275,2025-08-31,P-101B,corrective,cplg guard loose,cplg guard refitted,J. Patel,8,closed
+WO-1207,2025-09-02,P-101B,preventive,"brg noise, minor vib","lubd brg, chkd algn",V. Reddy,2,closed
+WO-1156,2025-09-03,E-301,preventive,channel gskt weep,tightnd bolts,J. Patel,8,closed
+WO-1229,2025-09-05,P-101B,preventive,fastener/guard chk,"retightened, ok",V. Reddy,3,closed
+WO-1586,2025-09-11,PT-108,preventive,fastener/guard chk,"retightened, ok",A. Khan,4,closed
+WO-1026,2025-09-15,P-101B,preventive,condition monitoring reading,"reading normal, filed",P. Nair,6,closed
+WO-1088,2025-09-17,V-201,preventive,level gauge foggy,cln level gauge,M. Das,4,closed
+WO-1365,2025-09-26,V-201,corrective,relief vlv insp due,relief vlv tested ok,R. Sharma,4,closed
+WO-1145,2025-09-27,E-301,preventive,spares availability chk,verified in store,J. Patel,12,closed
+WO-1121,2025-10-04,E-301,corrective,channel gskt weep,tightnd bolts,T. Bose,4,closed
+WO-1233,2025-10-04,C-501,preventive,spares availability chk,verified in store,N. Rao,12,closed
+WO-1453,2025-10-04,PT-108,preventive,routine pm as per schedule,"completed, no abnrml found",J. Patel,3,closed
+WO-1485,2025-10-10,PT-108,preventive,cln unit exterior,cleaned,J. Patel,1,closed
+WO-1316,2025-10-13,P-101B,preventive,housekeeping round,area cleaned,T. Bose,4,closed
+WO-1192,2025-10-15,E-301,preventive,dp hi susp choke,"chkd, cln plan raised",T. Bose,3,closed
+WO-1340,2025-10-22,PT-108,preventive,routine pm as per schedule,"completed, no abnrml found",A. Khan,3,closed
+WO-1515,2025-10-25,T-401,preventive,paint touch-up,done,M. Das,12,closed
+WO-1061,2025-10-27,T-401,preventive,routine insp,no abnrml found,S. Iyer,4,closed
+WO-1505,2025-10-30,C-501,preventive,housekeeping round,area cleaned,M. Das,3,closed
+WO-1539,2025-11-02,P-101A,preventive,cln unit exterior,cleaned,A. Khan,6,closed
+WO-1325,2025-11-03,C-501,preventive,spares availability chk,verified in store,K. Menon,2,closed
+WO-1159,2025-11-17,T-401,preventive,routine insp,no abnrml found,P. Nair,6,closed
+WO-1529,2025-11-17,P-101A,preventive,routine pm - vibn chk,"vibn within limit, cln done",J. Patel,6,closed
+WO-1066,2025-11-19,T-401,preventive,paint touch-up,done,K. Menon,3,closed
+WO-1482,2025-11-22,T-401,preventive,routine pm as per schedule,"completed, no abnrml found",M. Das,12,closed
+WO-1573,2025-11-26,P-101B,preventive,lube top-up,"greased, ok",P. Nair,6,closed
+WO-1133,2025-11-30,P-101B,preventive,fastener/guard chk,"retightened, ok",N. Rao,3,closed
+WO-1405,2025-12-05,PT-108,preventive,cln unit exterior,cleaned,A. Khan,6,closed
+WO-1024,2025-12-09,P-101A,corrective,gland leak minor,"tightnd gland, ok",K. Menon,1,closed
+WO-1135,2025-12-10,V-201,preventive,cln unit exterior,cleaned,P. Nair,4,closed
+WO-1425,2025-12-16,C-501,corrective,hi vib alarm,"chkd algn, lubd brg",K. Menon,12,closed
+WO-1450,2025-12-16,V-201,preventive,routine pm as per schedule,"completed, no abnrml found",M. Das,4,closed
+WO-1147,2025-12-23,C-501,preventive,spares availability chk,verified in store,M. Das,2,closed
+WO-1512,2025-12-27,E-301,preventive,paint touch-up,done,K. Menon,6,closed
+WO-1538,2025-12-30,V-201,preventive,cln unit exterior,cleaned,V. Reddy,0,closed
+WO-1319,2026-01-02,P-101A,preventive,paint touch-up,done,J. Patel,12,closed
+WO-1178,2026-01-07,V-201,preventive,housekeeping round,area cleaned,P. Nair,6,closed
+WO-1564,2026-01-11,P-101B,preventive,paint touch-up,done,T. Bose,8,closed
+WO-1545,2026-01-12,P-101A,preventive,paint touch-up,done,N. Rao,3,closed
+WO-1270,2026-01-22,P-101A,preventive,paint touch-up,done,S. Iyer,12,closed
+WO-1309,2026-01-22,T-401,preventive,cln unit exterior,cleaned,V. Reddy,6,closed
+WO-1448,2026-01-25,PT-108,preventive,abnrml reading susp,"chkd, recalib",K. Menon,12,closed
+WO-1420,2026-01-26,PT-108,preventive,tag/label refresh,relabelled,N. Rao,2,closed
+WO-1257,2026-01-28,T-401,preventive,6-monthly insp,"insp ok, within limit",J. Patel,6,closed
+WO-1473,2026-01-29,C-501,preventive,paint touch-up,done,A. Khan,8,closed
+WO-1577,2026-01-30,C-501,preventive,oil leak minor,"tightnd flange, cln",P. Nair,4,closed
+WO-1565,2026-02-01,E-301,preventive,tag/label refresh,relabelled,T. Bose,8,closed
+WO-1547,2026-02-07,PT-108,preventive,lube top-up,"greased, ok",V. Reddy,12,closed
+WO-1277,2026-02-09,P-101B,preventive,"brg noise, minor vib","lubd brg, chkd algn",S. Iyer,4,closed
+WO-1294,2026-02-11,C-501,preventive,tag/label refresh,relabelled,N. Rao,1,closed
+WO-1558,2026-02-12,P-101A,preventive,fastener/guard chk,"retightened, ok",N. Rao,12,closed
+WO-1465,2026-02-14,T-401,preventive,tag/label refresh,relabelled,M. Das,12,closed
+WO-1347,2026-02-18,E-301,preventive,tag/label refresh,relabelled,K. Menon,6,closed
+WO-1460,2026-02-21,V-201,preventive,paint touch-up,done,M. Das,8,closed
+WO-1260,2026-02-24,V-201,preventive,fastener/guard chk,"retightened, ok",J. Patel,2,closed
+WO-1100,2026-02-28,PT-108,preventive,abnrml reading susp,"chkd, recalib",K. Menon,4,closed
+WO-1236,2026-02-28,C-501,preventive,paint touch-up,done,P. Nair,1,closed
+WO-1056,2026-03-04,PT-108,preventive,housekeeping round,area cleaned,T. Bose,4,closed
+WO-1249,2026-03-07,P-101B,preventive,condition monitoring reading,"reading normal, filed",T. Bose,0,closed
+WO-1535,2026-03-10,V-201,preventive,6-monthly insp,"insp ok, within limit",J. Patel,4,closed
+WO-1153,2026-03-12,P-101A,preventive,fastener/guard chk,"retightened, ok",N. Rao,12,closed
+WO-1341,2026-03-12,P-101A,preventive,gland leak minor,"tightnd gland, ok",S. Iyer,0,closed
+WO-1406,2026-03-14,P-101A,preventive,6-monthly insp,"insp ok, within limit",A. Khan,6,closed
+WO-1390,2026-03-15,V-201,corrective,relief vlv insp due,relief vlv tested ok,A. Khan,0,closed
+WO-1447,2026-03-21,FV-112,preventive,paint touch-up,done,J. Patel,0,closed
+WO-1212,2026-03-27,P-101B,corrective,gland leak minor,"tightnd gland, ok",T. Bose,0,closed
+WO-1060,2026-03-29,FV-112,preventive,fastener/guard chk,"retightened, ok",R. Sharma,1,closed
+WO-1313,2026-04-01,C-501,preventive,routine pm as per schedule,"completed, no abnrml found",A. Khan,8,closed
+WO-1190,2026-04-02,T-401,preventive,lube top-up,"greased, ok",J. Patel,1,closed
+WO-1160,2026-04-11,T-401,preventive,paint touch-up,done,T. Bose,8,closed
+WO-1203,2026-04-12,T-401,preventive,lube top-up,"greased, ok",T. Bose,3,closed
+WO-1587,2026-04-14,P-101A,preventive,cln unit exterior,cleaned,N. Rao,3,closed
+WO-1519,2026-04-16,V-201,preventive,tag/label refresh,relabelled,J. Patel,3,closed
+WO-1306,2026-04-28,PT-108,corrective,abnrml reading susp,"chkd, recalib",V. Reddy,8,closed
+WO-1484,2026-04-28,P-101A,preventive,routine pm - vibn chk,"vibn within limit, cln done",N. Rao,8,closed
+WO-1225,2026-05-01,T-401,preventive,lube top-up,"greased, ok",V. Reddy,8,closed
+WO-1498,2026-05-03,E-301,preventive,dp hi susp choke,"chkd, cln plan raised",R. Sharma,3,closed
+WO-1274,2026-05-09,E-301,preventive,routine pm as per schedule,"completed, no abnrml found",V. Reddy,4,closed
+WO-1098,2026-05-11,P-101B,preventive,cln unit exterior,cleaned,J. Patel,2,closed
+WO-1209,2026-05-13,T-401,preventive,tag/label refresh,relabelled,R. Sharma,4,closed
+WO-1380,2026-05-16,E-301,preventive,dp hi susp choke,"chkd, cln plan raised",V. Reddy,4,closed
+WO-1028,2026-05-18,V-201,preventive,lube top-up,"greased, ok",P. Nair,3,closed
+WO-1166,2026-05-19,V-201,preventive,spares availability chk,verified in store,K. Menon,3,closed
+WO-1161,2026-05-22,PT-108,preventive,housekeeping round,area cleaned,T. Bose,0,closed
+WO-1342,2026-05-22,T-401,corrective,routine insp,no abnrml found,P. Nair,0,closed
+WO-1243,2026-05-24,FV-112,preventive,spares availability chk,verified in store,S. Iyer,6,closed
+WO-1355,2026-05-24,E-301,preventive,spares availability chk,verified in store,A. Khan,12,closed
+WO-1255,2026-05-26,FV-112,preventive,housekeeping round,area cleaned,V. Reddy,1,closed
+WO-1582,2026-05-28,V-201,preventive,relief vlv insp due,relief vlv tested ok,M. Das,0,closed
+WO-1020,2026-05-30,FV-112,preventive,spares availability chk,verified in store,V. Reddy,3,closed
+WO-1177,2026-05-30,E-301,preventive,condition monitoring reading,"reading normal, filed",V. Reddy,4,closed
+WO-1469,2026-05-31,V-201,preventive,level gauge foggy,cln level gauge,P. Nair,1,closed
+WO-1055,2026-06-09,FV-112,preventive,paint touch-up,done,A. Khan,3,closed
+WO-1438,2026-06-13,T-401,preventive,spares availability chk,verified in store,M. Das,12,closed
+WO-1272,2026-06-19,FV-112,preventive,6-monthly insp,"insp ok, within limit",R. Sharma,6,closed
+WO-1290,2026-06-30,P-101B,preventive,fastener/guard chk,"retightened, ok",P. Nair,2,closed
+WO-1594,2026-07-02,PT-108,corrective,abnrml reading susp,"chkd, recalib",P. Nair,3,closed
+WO-1084,2026-07-03,E-301,preventive,routine pm as per schedule,"completed, no abnrml found",A. Khan,8,closed
+WO-1090,2026-07-03,E-301,preventive,paint touch-up,done,T. Bose,1,closed
+WO-1497,2026-07-06,PT-108,preventive,lube top-up,"greased, ok",N. Rao,1,closed
+WO-1298,2026-07-07,E-301,preventive,condition monitoring reading,"reading normal, filed",P. Nair,1,closed

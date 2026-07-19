@@ -1,0 +1,1645 @@
+{
+  "nodes": [
+    {
+      "type": "Equipment",
+      "key": "Equipment:P-101A",
+      "props": {
+        "tag": "P-101A",
+        "name": "Feed Charge Pump A",
+        "type": "pump",
+        "unit": "Unit 2",
+        "location": "Pump House B"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Equipment",
+      "key": "Equipment:P-101B",
+      "props": {
+        "tag": "P-101B",
+        "name": "Feed Charge Pump B",
+        "type": "pump",
+        "unit": "Unit 2",
+        "location": "Pump House B"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Equipment",
+      "key": "Equipment:V-201",
+      "props": {
+        "tag": "V-201",
+        "name": "Feed Surge Drum",
+        "type": "vessel",
+        "unit": "Unit 2",
+        "location": "Process Area N"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Equipment",
+      "key": "Equipment:E-301",
+      "props": {
+        "tag": "E-301",
+        "name": "Feed/Effluent Exchanger",
+        "type": "heat exchanger",
+        "unit": "Unit 2",
+        "location": "Process Area N"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Equipment",
+      "key": "Equipment:FV-112",
+      "props": {
+        "tag": "FV-112",
+        "name": "Feed Flow Control Valve",
+        "type": "control valve",
+        "unit": "Unit 2",
+        "location": "Process Area N"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Equipment",
+      "key": "Equipment:PT-108",
+      "props": {
+        "tag": "PT-108",
+        "name": "Feed Header Pressure Transmitter",
+        "type": "instrument",
+        "unit": "Unit 2",
+        "location": "Process Area N"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Equipment",
+      "key": "Equipment:T-401",
+      "props": {
+        "tag": "T-401",
+        "name": "Slop Storage Tank",
+        "type": "tank",
+        "unit": "Unit 2",
+        "location": "Tank Farm"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Equipment",
+      "key": "Equipment:C-501",
+      "props": {
+        "tag": "C-501",
+        "name": "Off-gas Compressor",
+        "type": "compressor",
+        "unit": "Unit 2",
+        "location": "Compressor House"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:P-101A:mechanical seal",
+      "props": {
+        "name": "mechanical seal",
+        "parent_equipment": "P-101A"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:P-101A:bearing de",
+      "props": {
+        "name": "bearing DE",
+        "parent_equipment": "P-101A"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:P-101A:bearing nde",
+      "props": {
+        "name": "bearing NDE",
+        "parent_equipment": "P-101A"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:P-101A:impeller",
+      "props": {
+        "name": "impeller",
+        "parent_equipment": "P-101A"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:P-101A:coupling",
+      "props": {
+        "name": "coupling",
+        "parent_equipment": "P-101A"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:P-101B:mechanical seal",
+      "props": {
+        "name": "mechanical seal",
+        "parent_equipment": "P-101B"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:P-101B:bearing de",
+      "props": {
+        "name": "bearing DE",
+        "parent_equipment": "P-101B"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:P-101B:impeller",
+      "props": {
+        "name": "impeller",
+        "parent_equipment": "P-101B"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:E-301:tube bundle",
+      "props": {
+        "name": "tube bundle",
+        "parent_equipment": "E-301"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:E-301:channel gasket",
+      "props": {
+        "name": "channel gasket",
+        "parent_equipment": "E-301"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:FV-112:actuator",
+      "props": {
+        "name": "actuator",
+        "parent_equipment": "FV-112"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:FV-112:positioner",
+      "props": {
+        "name": "positioner",
+        "parent_equipment": "FV-112"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:V-201:relief valve",
+      "props": {
+        "name": "relief valve",
+        "parent_equipment": "V-201"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:V-201:level gauge",
+      "props": {
+        "name": "level gauge",
+        "parent_equipment": "V-201"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:C-501:bearing de",
+      "props": {
+        "name": "bearing DE",
+        "parent_equipment": "C-501"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "Component",
+      "key": "Component:C-501:mechanical seal",
+      "props": {
+        "name": "mechanical seal",
+        "parent_equipment": "C-501"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "key": "FailureMode:ELP",
+      "props": {
+        "code": "ELP",
+        "name": "External leakage (process medium)"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "key": "FailureMode:INL",
+      "props": {
+        "code": "INL",
+        "name": "Internal leakage"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "key": "FailureMode:VIB",
+      "props": {
+        "code": "VIB",
+        "name": "Vibration"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "key": "FailureMode:OHE",
+      "props": {
+        "code": "OHE",
+        "name": "Overheating"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "key": "FailureMode:NOI",
+      "props": {
+        "code": "NOI",
+        "name": "Noise"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "key": "FailureMode:STU",
+      "props": {
+        "code": "STU",
+        "name": "Stuck / seized"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "key": "FailureMode:AIR",
+      "props": {
+        "code": "AIR",
+        "name": "Abnormal instrument reading"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "FailureMode",
+      "key": "FailureMode:PLU",
+      "props": {
+        "code": "PLU",
+        "name": "Plugged / choked"
+      },
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "WorkOrder",
+      "key": "WorkOrder:WO-1001",
+      "props": {
+        "wo_id": "WO-1001",
+        "type": "corrective",
+        "row": 38
+      },
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "WorkOrder",
+      "key": "WorkOrder:WO-1002",
+      "props": {
+        "wo_id": "WO-1002",
+        "type": "corrective",
+        "row": 45
+      },
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "WorkOrder",
+      "key": "WorkOrder:WO-1003",
+      "props": {
+        "wo_id": "WO-1003",
+        "type": "corrective",
+        "row": 168
+      },
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "WorkOrder",
+      "key": "WorkOrder:WO-1004",
+      "props": {
+        "wo_id": "WO-1004",
+        "type": "corrective",
+        "row": 174
+      },
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "WorkOrder",
+      "key": "WorkOrder:WO-1005",
+      "props": {
+        "wo_id": "WO-1005",
+        "type": "corrective",
+        "row": 337
+      },
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "WorkOrder",
+      "key": "WorkOrder:WO-1006",
+      "props": {
+        "wo_id": "WO-1006",
+        "type": "corrective",
+        "row": 459
+      },
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "WorkOrder",
+      "key": "WorkOrder:WO-1007",
+      "props": {
+        "wo_id": "WO-1007",
+        "type": "corrective",
+        "row": 465
+      },
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "Procedure",
+      "key": "Procedure:SOP-05",
+      "props": {
+        "sop_id": "SOP-05",
+        "title": "Centrifugal Pump Start-up and Shutdown",
+        "revision": "2"
+      },
+      "doc_ids": [
+        "SOP-05"
+      ]
+    },
+    {
+      "type": "Procedure",
+      "key": "Procedure:SOP-09",
+      "props": {
+        "sop_id": "SOP-09",
+        "title": "Lock-Out Tag-Out (LOTO) for Rotating Equipment",
+        "revision": "4"
+      },
+      "doc_ids": [
+        "SOP-09"
+      ]
+    },
+    {
+      "type": "Procedure",
+      "key": "Procedure:SOP-12",
+      "props": {
+        "sop_id": "SOP-12",
+        "title": "Hot Work Permit Procedure",
+        "revision": "1"
+      },
+      "doc_ids": [
+        "SOP-12"
+      ]
+    },
+    {
+      "type": "Procedure",
+      "key": "Procedure:SOP-17",
+      "props": {
+        "sop_id": "SOP-17",
+        "title": "Confined Space Entry Procedure",
+        "revision": "1"
+      },
+      "doc_ids": [
+        "SOP-17"
+      ]
+    },
+    {
+      "type": "Procedure",
+      "key": "Procedure:SOP-21",
+      "props": {
+        "sop_id": "SOP-21",
+        "title": "Pump Mechanical Seal Replacement",
+        "revision": "3"
+      },
+      "doc_ids": [
+        "SOP-21"
+      ]
+    },
+    {
+      "type": "Procedure",
+      "key": "Procedure:SOP-24",
+      "props": {
+        "sop_id": "SOP-24",
+        "title": "Shell-and-Tube Heat Exchanger Cleaning",
+        "revision": "2"
+      },
+      "doc_ids": [
+        "SOP-24"
+      ]
+    },
+    {
+      "type": "Procedure",
+      "key": "Procedure:SOP-30",
+      "props": {
+        "sop_id": "SOP-30",
+        "title": "Field Instrument Calibration",
+        "revision": "1"
+      },
+      "doc_ids": [
+        "SOP-30"
+      ]
+    },
+    {
+      "type": "RegulatoryClause",
+      "key": "RegulatoryClause:OISD-STD-105:5.1",
+      "props": {
+        "standard": "OISD-STD-105",
+        "clause_no": "5.1",
+        "text_summary": "A valid work permit shall be obtained and displayed before any maintenance, intr"
+      },
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "RegulatoryClause",
+      "key": "RegulatoryClause:OISD-STD-105:6.2",
+      "props": {
+        "standard": "OISD-STD-105",
+        "clause_no": "6.2",
+        "text_summary": "For hot work, a fire watch shall be posted and the area gas tested for flammable"
+      },
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "RegulatoryClause",
+      "key": "RegulatoryClause:OISD-STD-105:7.3",
+      "props": {
+        "standard": "OISD-STD-105",
+        "clause_no": "7.3",
+        "text_summary": "Prior to confined space entry, the atmosphere shall be tested for oxygen (19.5-2"
+      },
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "RegulatoryClause",
+      "key": "RegulatoryClause:FACT-ACT:36",
+      "props": {
+        "standard": "FACT-ACT",
+        "clause_no": "36",
+        "text_summary": "No person shall enter any confined space in which dangerous fumes are likely to "
+      },
+      "doc_ids": [
+        "FACT-ACT"
+      ]
+    },
+    {
+      "type": "RegulatoryClause",
+      "key": "RegulatoryClause:PESA-EL-11:3.2",
+      "props": {
+        "standard": "PESA-EL-11",
+        "clause_no": "3.2",
+        "text_summary": "All electrical energy sources shall be isolated, locked and tagged, and verified"
+      },
+      "doc_ids": [
+        "PESA-EL-11"
+      ]
+    },
+    {
+      "type": "RegulatoryClause",
+      "key": "RegulatoryClause:OISD-STD-106:4.4",
+      "props": {
+        "standard": "OISD-STD-106",
+        "clause_no": "4.4",
+        "text_summary": "Pressure relief devices on vessels shall be inspected and function-tested at int"
+      },
+      "doc_ids": [
+        "OISD-STD-106"
+      ]
+    },
+    {
+      "type": "RegulatoryClause",
+      "key": "RegulatoryClause:OISD-GDN-176:8.1",
+      "props": {
+        "standard": "OISD-GDN-176",
+        "clause_no": "8.1",
+        "text_summary": "Rotating equipment shall be subject to periodic condition monitoring; overdue in"
+      },
+      "doc_ids": [
+        "OISD-GDN-176"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2022-014",
+      "props": {
+        "incident_id": "INC-2022-014",
+        "date": "2021-11-30",
+        "severity": "near-miss"
+      },
+      "doc_ids": [
+        "INC-2022-014"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2023-006",
+      "props": {
+        "incident_id": "INC-2023-006",
+        "date": "2023-01-14",
+        "severity": "minor"
+      },
+      "doc_ids": [
+        "INC-2023-006"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2025-003",
+      "props": {
+        "incident_id": "INC-2025-003",
+        "date": "2025-05-23",
+        "severity": "minor"
+      },
+      "doc_ids": [
+        "INC-2025-003"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2024-011",
+      "props": {
+        "incident_id": "INC-2024-011",
+        "date": "2024-05-16",
+        "severity": "near-miss"
+      },
+      "doc_ids": [
+        "INC-2024-011"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2022-021",
+      "props": {
+        "incident_id": "INC-2022-021",
+        "date": "2022-04-27",
+        "severity": "minor"
+      },
+      "doc_ids": [
+        "INC-2022-021"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2023-018",
+      "props": {
+        "incident_id": "INC-2023-018",
+        "date": "2023-09-29",
+        "severity": "near-miss"
+      },
+      "doc_ids": [
+        "INC-2023-018"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2021-009",
+      "props": {
+        "incident_id": "INC-2021-009",
+        "date": "2021-08-30",
+        "severity": "minor"
+      },
+      "doc_ids": [
+        "INC-2021-009"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2024-002",
+      "props": {
+        "incident_id": "INC-2024-002",
+        "date": "2024-03-07",
+        "severity": "minor"
+      },
+      "doc_ids": [
+        "INC-2024-002"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2025-010",
+      "props": {
+        "incident_id": "INC-2025-010",
+        "date": "2025-08-09",
+        "severity": "near-miss"
+      },
+      "doc_ids": [
+        "INC-2025-010"
+      ]
+    },
+    {
+      "type": "Incident",
+      "key": "Incident:INC-2022-030",
+      "props": {
+        "incident_id": "INC-2022-030",
+        "date": "2022-08-15",
+        "severity": "minor"
+      },
+      "doc_ids": [
+        "INC-2022-030"
+      ]
+    },
+    {
+      "type": "TacitNote",
+      "key": "TacitNote:VN-001",
+      "props": {
+        "note_id": "VN-001",
+        "author_role": "Senior Operator"
+      },
+      "doc_ids": [
+        "VN-001"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "type": "PART_OF",
+      "source": "Component:P-101A:mechanical seal",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:P-101A:bearing de",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:P-101A:bearing nde",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:P-101A:impeller",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:P-101A:coupling",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:P-101B:mechanical seal",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:P-101B:bearing de",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:P-101B:impeller",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:E-301:tube bundle",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:E-301:channel gasket",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:FV-112:actuator",
+      "target": "Equipment:FV-112",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:FV-112:positioner",
+      "target": "Equipment:FV-112",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:V-201:relief valve",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:V-201:level gauge",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:C-501:bearing de",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PART_OF",
+      "source": "Component:C-501:mechanical seal",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "HAS_CAUSE",
+      "source": "FailureMode:ELP",
+      "target": "Component:P-101A:mechanical seal",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "HAS_CAUSE",
+      "source": "FailureMode:ELP",
+      "target": "FailureMode:VIB",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "HAS_CAUSE",
+      "source": "FailureMode:VIB",
+      "target": "Component:P-101A:bearing de",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "HAS_CAUSE",
+      "source": "FailureMode:OHE",
+      "target": "Component:P-101A:bearing de",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "HAS_CAUSE",
+      "source": "FailureMode:INL",
+      "target": "Component:E-301:channel gasket",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "HAS_CAUSE",
+      "source": "FailureMode:STU",
+      "target": "Component:FV-112:actuator",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source": "Equipment:T-401",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source": "Equipment:T-401",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source": "Equipment:P-101A",
+      "target": "Equipment:FV-112",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source": "Equipment:P-101B",
+      "target": "Equipment:FV-112",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source": "Equipment:FV-112",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source": "Equipment:E-301",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "CONNECTED_TO",
+      "source": "Equipment:V-201",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "PID-U2-001"
+      ]
+    },
+    {
+      "type": "PERFORMED_ON",
+      "source": "WorkOrder:WO-1001",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "WorkOrder:WO-1001",
+      "target": "FailureMode:VIB",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "PERFORMED_ON",
+      "source": "WorkOrder:WO-1002",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "WorkOrder:WO-1002",
+      "target": "FailureMode:ELP",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "PERFORMED_ON",
+      "source": "WorkOrder:WO-1003",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "WorkOrder:WO-1003",
+      "target": "FailureMode:VIB",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "PERFORMED_ON",
+      "source": "WorkOrder:WO-1004",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "WorkOrder:WO-1004",
+      "target": "FailureMode:ELP",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "PERFORMED_ON",
+      "source": "WorkOrder:WO-1005",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "WorkOrder:WO-1005",
+      "target": "FailureMode:ELP",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "PERFORMED_ON",
+      "source": "WorkOrder:WO-1006",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "WorkOrder:WO-1006",
+      "target": "FailureMode:VIB",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "PERFORMED_ON",
+      "source": "WorkOrder:WO-1007",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "WorkOrder:WO-1007",
+      "target": "FailureMode:ELP",
+      "doc_ids": [
+        "DOC-WO-001"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-05",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "SOP-05"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-05",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "SOP-05"
+      ]
+    },
+    {
+      "type": "REQUIRES",
+      "source": "Procedure:SOP-05",
+      "target": "RegulatoryClause:OISD-STD-105:5.1",
+      "doc_ids": [
+        "SOP-05"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-09",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "SOP-09"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-09",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "SOP-09"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-09",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "SOP-09"
+      ]
+    },
+    {
+      "type": "REQUIRES",
+      "source": "Procedure:SOP-09",
+      "target": "RegulatoryClause:PESA-EL-11:3.2",
+      "doc_ids": [
+        "SOP-09"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-12",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "SOP-12"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-12",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "SOP-12"
+      ]
+    },
+    {
+      "type": "REQUIRES",
+      "source": "Procedure:SOP-12",
+      "target": "RegulatoryClause:OISD-STD-105:6.2",
+      "doc_ids": [
+        "SOP-12"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-17",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "SOP-17"
+      ]
+    },
+    {
+      "type": "REQUIRES",
+      "source": "Procedure:SOP-17",
+      "target": "RegulatoryClause:OISD-STD-105:7.3",
+      "doc_ids": [
+        "SOP-17"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-21",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "SOP-21"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-21",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "SOP-21"
+      ]
+    },
+    {
+      "type": "REQUIRES",
+      "source": "Procedure:SOP-21",
+      "target": "RegulatoryClause:OISD-STD-105:5.1",
+      "doc_ids": [
+        "SOP-21"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-24",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "SOP-24"
+      ]
+    },
+    {
+      "type": "REQUIRES",
+      "source": "Procedure:SOP-24",
+      "target": "RegulatoryClause:OISD-STD-105:5.1",
+      "doc_ids": [
+        "SOP-24"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-30",
+      "target": "Equipment:PT-108",
+      "doc_ids": [
+        "SOP-30"
+      ]
+    },
+    {
+      "type": "GOVERNS",
+      "source": "Procedure:SOP-30",
+      "target": "Equipment:FV-112",
+      "doc_ids": [
+        "SOP-30"
+      ]
+    },
+    {
+      "type": "REQUIRES",
+      "source": "Procedure:SOP-30",
+      "target": "RegulatoryClause:OISD-STD-105:5.1",
+      "doc_ids": [
+        "SOP-30"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:5.1",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:5.1",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:5.1",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:5.1",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:5.1",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:6.2",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:6.2",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:6.2",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:6.2",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:6.2",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:7.3",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:7.3",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:7.3",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:7.3",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-105:7.3",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "OISD-STD-105"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:FACT-ACT:36",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "FACT-ACT"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:PESA-EL-11:3.2",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "PESA-EL-11"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:PESA-EL-11:3.2",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "PESA-EL-11"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:PESA-EL-11:3.2",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "PESA-EL-11"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-STD-106:4.4",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "OISD-STD-106"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-GDN-176:8.1",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "OISD-GDN-176"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-GDN-176:8.1",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "OISD-GDN-176"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-GDN-176:8.1",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "OISD-GDN-176"
+      ]
+    },
+    {
+      "type": "COVERS",
+      "source": "RegulatoryClause:OISD-GDN-176:8.1",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "OISD-GDN-176"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2022-014",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "INC-2022-014"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2022-014",
+      "target": "FailureMode:ELP",
+      "doc_ids": [
+        "INC-2022-014"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2023-006",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "INC-2023-006"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2023-006",
+      "target": "FailureMode:ELP",
+      "doc_ids": [
+        "INC-2023-006"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2025-003",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "INC-2025-003"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2025-003",
+      "target": "FailureMode:ELP",
+      "doc_ids": [
+        "INC-2025-003"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2024-011",
+      "target": "Equipment:V-201",
+      "doc_ids": [
+        "INC-2024-011"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2024-011",
+      "target": "FailureMode:AIR",
+      "doc_ids": [
+        "INC-2024-011"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2022-021",
+      "target": "Equipment:E-301",
+      "doc_ids": [
+        "INC-2022-021"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2022-021",
+      "target": "FailureMode:INL",
+      "doc_ids": [
+        "INC-2022-021"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2023-018",
+      "target": "Equipment:C-501",
+      "doc_ids": [
+        "INC-2023-018"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2023-018",
+      "target": "FailureMode:OHE",
+      "doc_ids": [
+        "INC-2023-018"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2021-009",
+      "target": "Equipment:FV-112",
+      "doc_ids": [
+        "INC-2021-009"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2021-009",
+      "target": "FailureMode:STU",
+      "doc_ids": [
+        "INC-2021-009"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2024-002",
+      "target": "Equipment:PT-108",
+      "doc_ids": [
+        "INC-2024-002"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2024-002",
+      "target": "FailureMode:AIR",
+      "doc_ids": [
+        "INC-2024-002"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2025-010",
+      "target": "Equipment:T-401",
+      "doc_ids": [
+        "INC-2025-010"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2025-010",
+      "target": "FailureMode:PLU",
+      "doc_ids": [
+        "INC-2025-010"
+      ]
+    },
+    {
+      "type": "OCCURRED_AT",
+      "source": "Incident:INC-2022-030",
+      "target": "Equipment:P-101B",
+      "doc_ids": [
+        "INC-2022-030"
+      ]
+    },
+    {
+      "type": "EXHIBITS",
+      "source": "Incident:INC-2022-030",
+      "target": "FailureMode:NOI",
+      "doc_ids": [
+        "INC-2022-030"
+      ]
+    },
+    {
+      "type": "ABOUT",
+      "source": "TacitNote:VN-001",
+      "target": "Equipment:P-101A",
+      "doc_ids": [
+        "VN-001"
+      ]
+    },
+    {
+      "type": "ABOUT",
+      "source": "TacitNote:VN-001",
+      "target": "FailureMode:ELP",
+      "doc_ids": [
+        "VN-001"
+      ]
+    },
+    {
+      "type": "ABOUT",
+      "source": "TacitNote:VN-001",
+      "target": "FailureMode:VIB",
+      "doc_ids": [
+        "VN-001"
+      ]
+    }
+  ]
+}

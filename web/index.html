@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PlantCortex — Expert Copilot</title>
+<style>
+  :root{
+    --bg:#0c1116; --panel:#131a22; --panel2:#0f151b; --border:#222c38;
+    --ink:#e6edf3; --muted:#8b98a8; --accent:#38bdf8; --accent2:#22d3a5;
+    --warn:#f59e0b; --danger:#f87171; --chip:#1c2733;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--ink);height:100vh;display:flex;flex-direction:column}
+  header{display:flex;align-items:center;gap:14px;padding:10px 16px;border-bottom:1px solid var(--border);background:var(--panel2)}
+  header .logo{font-weight:800;letter-spacing:.3px;font-size:16px}
+  header .logo b{color:var(--accent)}
+  header .tag{color:var(--muted);font-size:12px}
+  header .stat{margin-left:auto;color:var(--muted);font-size:12px;text-align:right}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent2);margin-right:5px}
+  main{flex:1;display:grid;grid-template-columns:minmax(340px,1fr) 1.05fr 1fr;gap:1px;background:var(--border);overflow:hidden}
+  .pane{background:var(--panel);display:flex;flex-direction:column;min-height:0}
+  .pane h2{margin:0;padding:10px 14px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);border-bottom:1px solid var(--border)}
+  .scroll{overflow:auto;padding:14px;flex:1;min-height:0}
+  /* chat */
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+  .chip{background:var(--chip);border:1px solid var(--border);color:var(--ink);border-radius:14px;
+        padding:5px 10px;font-size:12px;cursor:pointer}
+  .chip:hover{border-color:var(--accent)}
+  .msg{margin-bottom:14px}
+  .q{color:var(--accent);font-weight:600;margin-bottom:6px}
+  .badges{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:4px 0 8px}
+  .badge{font-size:11px;padding:2px 8px;border-radius:10px;border:1px solid var(--border);color:var(--muted)}
+  .badge.mode{color:var(--accent);border-color:#1e3a4a;background:#0e1c24}
+  .badge.multihop{color:var(--accent2);border-color:#12352c;background:#0c1f19}
+  .badge.global{color:#c084fc;border-color:#2b1f3a;background:#170f22}
+  .badge.refusal{color:var(--danger);border-color:#3a1f22;background:#201113}
+  .badge.base{color:var(--warn);border-color:#3a2f1a}
+  .ans{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:12px}
+  .ans b{color:#fff}
+  .ans code{background:#0a0f14;padding:1px 5px;border-radius:4px;color:var(--accent2)}
+  .path{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--accent2);
+        background:#0a1519;border:1px dashed #1c3a33;border-radius:6px;padding:6px 8px;margin-bottom:8px;overflow-x:auto;white-space:nowrap}
+  .cites{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+  .cite{font-size:11px;background:#0e1a22;border:1px solid #1e3140;color:var(--accent);border-radius:6px;padding:4px 8px;cursor:pointer}
+  .cite:hover{background:#14232e}
+  .cite .qt{color:var(--muted);font-style:italic}
+  form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--border);background:var(--panel2)}
+  input[type=text]{flex:1;background:#0a0f14;border:1px solid var(--border);color:var(--ink);border-radius:8px;padding:10px 12px;font-size:14px}
+  button{background:var(--accent);color:#00222e;border:0;border-radius:8px;padding:0 16px;font-weight:700;cursor:pointer}
+  button.ghost{background:transparent;color:var(--muted);border:1px solid var(--border);font-weight:500}
+  .toggle{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:12px;padding:0 6px}
+  /* source */
+  #srcTitle{font-size:12px;color:var(--muted);padding:8px 14px;border-bottom:1px solid var(--border)}
+  #srcBody{flex:1;min-height:0;position:relative;background:#0a0f14}
+  #srcBody iframe,#srcBody img{width:100%;height:100%;border:0;object-fit:contain;background:#fff}
+  #srcText{padding:14px;color:var(--ink);white-space:pre-wrap;overflow:auto;height:100%}
+  .bbox{position:absolute;border:2px solid var(--warn);box-shadow:0 0 0 9999px rgba(0,0,0,.25);border-radius:3px}
+  /* graph */
+  #graph{flex:1;min-height:0}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;padding:8px 14px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}
+  .legend i{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:4px;vertical-align:middle}
+  svg text{fill:var(--ink);font-size:10px}
+  .edge{stroke:#2b3a49;stroke-width:1.4}
+  .edge.hot{stroke:var(--accent2);stroke-width:2.6}
+  footer{padding:6px 16px;border-top:1px solid var(--border);background:var(--panel2);color:var(--muted);font-size:12px;display:flex;gap:16px}
+  .toast{position:fixed;right:16px;bottom:40px;background:#0e1c24;border:1px solid var(--accent);color:var(--ink);
+         padding:10px 14px;border-radius:8px;font-size:13px;opacity:0;transition:opacity .3s,transform .3s;
+         transform:translateY(10px);pointer-events:none}
+  .toast.show{opacity:1;transform:none}
+
+  /* ---- motion system (tokens + tasteful animation; reduced-motion safe) ---- */
+  :root{--dur-1:150ms;--dur-2:260ms;--dur-3:420ms;
+        --ease-out:cubic-bezier(.22,.9,.35,1);--ease-spring:cubic-bezier(.34,1.45,.44,1)}
+  .skel{height:11px;border-radius:6px;margin:9px 0;background:#141e29}
+  header{position:relative;overflow:hidden}
+  header>*{position:relative;z-index:1}
+  @media (prefers-reduced-motion: no-preference){
+    .skel{background:linear-gradient(90deg,#141e29 25%,#20303f 50%,#141e29 75%);
+          background-size:200% 100%;animation:shimmer 1.1s linear infinite}
+    @keyframes shimmer{to{background-position:-200% 0}}
+    .msg{animation:rise var(--dur-3) var(--ease-out) both}
+    .cite,.ans .path{animation:rise var(--dur-2) var(--ease-out) both}
+    @keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+    .chip,.cite,button,.badge{transition:transform var(--dur-1) var(--ease-out),
+      border-color var(--dur-1),box-shadow var(--dur-1),background var(--dur-1)}
+    .chip:hover,.cite:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(56,189,248,.18)}
+    .chip:active,.cite:active,button:active{transform:scale(.96)}
+    svg#graph circle{transform-box:fill-box;transform-origin:center;
+      animation:pop .5s var(--ease-spring) both}
+    @keyframes pop{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+    .edge.hot{stroke-dasharray:7 5;animation:flow 1.1s linear infinite}
+    @keyframes flow{to{stroke-dashoffset:-24}}
+    header::before{content:"";position:absolute;inset:-120% -30%;z-index:0;pointer-events:none;
+      background:radial-gradient(45% 55% at 68% 45%,rgba(56,189,248,.10),transparent 70%),
+                 radial-gradient(35% 45% at 25% 60%,rgba(34,211,165,.06),transparent 70%);
+      animation:aurora 16s ease-in-out infinite alternate}
+    @keyframes aurora{from{transform:translate3d(-3%,0,0) rotate(0deg)}
+                      to{transform:translate3d(3%,6%,0) rotate(4deg)}}
+    .tl-dot{transform-box:fill-box;transform-origin:center;animation:pop .45s var(--ease-spring) both}
+    .tl-link{stroke-dasharray:200;stroke-dashoffset:200;animation:draw .8s var(--ease-out) forwards}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    .tl-verdict{animation:rise var(--dur-3) var(--ease-out) both}
+  }
+  /* Time-Lens replay (works static under reduced motion) */
+  .tl-wrap{background:var(--panel2);border:1px solid var(--border);border-radius:10px;
+    padding:12px 12px 6px;margin-top:8px;overflow-x:auto}
+  .tl-cap{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;color:var(--muted);
+    display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+  .tl-cap i{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:middle}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><b>Plant</b>Cortex</div>
+  <div class="tag">Unified Asset &amp; Operations Brain</div>
+  <div class="stat" id="hstat">connecting…</div>
+</header>
+<main>
+  <!-- CHAT -->
+  <section class="pane">
+    <h2>Engineer Copilot</h2>
+    <div class="scroll" id="chat">
+      <div class="chips" id="samples"></div>
+    </div>
+    <form id="askForm">
+      <input type="text" id="q" placeholder="Ask about equipment, failures, compliance…" autocomplete="off"/>
+      <label class="toggle"><input type="checkbox" id="baseline"/> baseline</label>
+      <button type="submit">Ask</button>
+    </form>
+  </section>
+  <!-- SOURCE -->
+  <section class="pane">
+    <h2>Source</h2>
+    <div id="srcTitle">Click a citation to open its source with the exact region.</div>
+    <div id="srcBody"></div>
+  </section>
+  <!-- GRAPH -->
+  <section class="pane">
+    <h2>Knowledge Graph · reasoning path</h2>
+    <svg id="graph" viewBox="0 0 460 520" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="legend" id="legend"></div>
+  </section>
+</main>
+<footer>
+  <span id="fstat"></span>
+  <span id="fmode"></span>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const API = location.origin;
+const TYPE_COLORS = {Equipment:"#38bdf8",FailureMode:"#f87171",WorkOrder:"#94a3b8",
+  Incident:"#fb923c",Procedure:"#22d3a5",RegulatoryClause:"#c084fc",TacitNote:"#facc15",
+  Document:"#475569",Chunk:"#334155",Component:"#2dd4bf"};
+const SAMPLES = [
+  "What does OISD-STD-105 clause 7.3 require for confined space entry?",
+  "Which pump had repeated seal failures and an overdue inspection and appears in a near-miss report?",
+  "What failure patterns recur across the last five years?",
+  "What is the recommended tyre pressure for a delivery truck?"
+];
+
+function el(t,c,h){const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+function mdToHtml(s){
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;")
+    .replace(/\*\*(.+?)\*\*/g,"<b>$1</b>")
+    .replace(/`(.+?)`/g,"<code>$1</code>")
+    .replace(/\[(E\d+)\]/g,'<span style="color:#38bdf8">[$1]</span>')
+    .replace(/^\s*[-*]\s(.*)$/gm,"• $1")
+    .replace(/\n/g,"<br>");
+}
+
+// ---- source viewer ----
+function showSource(cite){
+  const id=cite.doc_id, title=document.getElementById("srcTitle"), body=document.getElementById("srcBody");
+  body.innerHTML=""; title.textContent = id + (cite.page?`  ·  p.${cite.page}`:"") + (cite.row!=null?`  ·  row ${cite.row}`:"");
+  if(id.startsWith("PID")){
+    const wrap=el("div"); wrap.style.cssText="position:relative;width:100%;height:100%";
+    const img=el("img"); img.src=`${API}/files/pnid/PID-U2-001.png`;
+    img.onload=()=>{ if(cite.bbox){ const b=cite.bbox, nx=img.naturalWidth, ny=img.naturalHeight;
+      const r=img.getBoundingClientRect(), sc=Math.min(r.width/nx,r.height/ny);
+      const ox=(r.width-nx*sc)/2, oy=(r.height-ny*sc)/2;
+      const box=el("div","bbox"); box.style.left=(ox+b[0]*sc)+"px";box.style.top=(oy+b[1]*sc)+"px";
+      box.style.width=((b[2]-b[0])*sc)+"px";box.style.height=((b[3]-b[1])*sc)+"px";
+      wrap.appendChild(box);} };
+    wrap.appendChild(img); body.appendChild(wrap);
+  } else if(id.startsWith("DOC-WO")||id.startsWith("VN")){
+    body.appendChild(el("div","",`<div id="srcText"><b>${id}</b>\n\n“${cite.quote||""}”\n\n(Structured/− source — quoted region shown.)</div>`));
+  } else {
+    const f=el("iframe"); f.src=`${API}/doc/${id}`; body.appendChild(f);
+  }
+}
+
+// ---- graph ----
+async function drawGraph(center, path){
+  const svg=document.getElementById("graph"); svg.innerHTML="";
+  if(!center) return;
+  const res=await fetch(`${API}/graph/subgraph?center=${encodeURIComponent(center)}&hops=1&limit=26`).then(r=>r.json());
+  if(!res.nodes.length) return;
+  const W=460,H=520,cx=W/2,cy=H/2;
+  const centerNode=res.nodes.find(n=>n.id===center)||res.nodes[0];
+  const others=res.nodes.filter(n=>n.id!==centerNode.id).slice(0,18);
+  const pos={}; pos[centerNode.id]=[cx,cy];
+  others.forEach((n,i)=>{const a=2*Math.PI*i/others.length; pos[n.id]=[cx+165*Math.cos(a),cy+205*Math.sin(a)*0.85];});
+  const hot=new Set((path||[]).flatMap(p=>[p.source+"|"+p.target,p.target+"|"+p.source]));
+  const labelOf=id=>id.split(":").slice(1).join(":")||id;
+  res.links.forEach(l=>{ if(!pos[l.source]||!pos[l.target])return;
+    const isHot=hot.has(labelOf(l.source)+"|"+labelOf(l.target))||hot.has(l.source+"|"+l.target);
+    const ln=document.createElementNS("http://www.w3.org/2000/svg","line");
+    ln.setAttribute("x1",pos[l.source][0]);ln.setAttribute("y1",pos[l.source][1]);
+    ln.setAttribute("x2",pos[l.target][0]);ln.setAttribute("y2",pos[l.target][1]);
+    ln.setAttribute("class","edge"+(isHot?" hot":"")); svg.appendChild(ln); });
+  res.nodes.forEach((n,idx)=>{ if(!pos[n.id])return; const [x,y]=pos[n.id];
+    const g=document.createElementNS("http://www.w3.org/2000/svg","g");
+    const c=document.createElementNS("http://www.w3.org/2000/svg","circle");
+    c.style.animationDelay=(n.id===centerNode.id?0:80+idx*35)+"ms";
+    const r=n.id===centerNode.id?11:7;
+    c.setAttribute("cx",x);c.setAttribute("cy",y);c.setAttribute("r",r);
+    c.setAttribute("fill",TYPE_COLORS[n.type]||"#64748b");
+    c.setAttribute("stroke","#0c1116");c.setAttribute("stroke-width","2");
+    const t=document.createElementNS("http://www.w3.org/2000/svg","text");
+    t.setAttribute("x",x);t.setAttribute("y",y-r-3);t.setAttribute("text-anchor","middle");
+    t.textContent=(n.label||labelOf(n.id)).slice(0,14);
+    g.appendChild(c);g.appendChild(t);svg.appendChild(g); });
+}
+function legend(){const L=document.getElementById("legend");
+  ["Equipment","FailureMode","Procedure","Incident","RegulatoryClause","TacitNote"].forEach(t=>{
+    L.appendChild(el("span","",`<i style="background:${TYPE_COLORS[t]}"></i>${t}`));});}
+
+// ---- ask ----
+async function ask(q){
+  const baseline=document.getElementById("baseline").checked;
+  const chat=document.getElementById("chat");
+  const msg=el("div","msg"); msg.appendChild(el("div","q","▸ "+q));
+  const load=el("div","ans",'<div class="skel" style="width:72%"></div><div class="skel" style="width:92%"></div><div class="skel" style="width:58%"></div>');
+  msg.appendChild(load);
+  chat.appendChild(msg); chat.scrollTop=chat.scrollHeight;
+  const r=await fetch(`${API}/ask`,{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({question:q,baseline})}).then(x=>x.json());
+  load.remove();
+  const badges=el("div","badges");
+  badges.appendChild(el("span","badge mode "+r.mode, r.mode.toUpperCase()));
+  if(baseline) badges.appendChild(el("span","badge base","VECTOR-ONLY BASELINE"));
+  const confB=el("span","badge","confidence 0%"); badges.appendChild(confB);
+  animNum(confB, Math.round(r.confidence*100), "confidence ", "%");
+  badges.appendChild(el("span","badge",(r.llm_used?"LLM":"extractive")+" · "+r.latency_ms+"ms"));
+  msg.appendChild(badges);
+  const ans=el("div","ans");
+  if(r.path&&r.path.length){ const p=el("div","path",
+     r.path.map((e,i)=>(i?"":labelOf2(e.source))+` —[${e.edge}]→ `+labelOf2(e.target)).join("")); ans.appendChild(p);}
+  ans.appendChild(el("div","",mdToHtml(r.answer_markdown)));
+  if(r.citations&&r.citations.length){ const cw=el("div","cites");
+    r.citations.forEach((c,i)=>{ const ch=el("div","cite",
+      `${c.doc_id}${c.page?" p."+c.page:""} <span class="qt">“${(c.quote||"").slice(0,42)}”</span>`);
+      ch.style.animationDelay=(120+i*70)+"ms";
+      ch.onclick=()=>showSource(c); cw.appendChild(ch);}); ans.appendChild(cw);}
+  msg.appendChild(ans); chat.scrollTop=chat.scrollHeight;
+  document.getElementById("fmode").textContent="mode: "+r.mode+(baseline?" (baseline)":"");
+  const center=(r.seeds&&r.seeds[0])|| (r.citations[0]&&entityGuess(r.citations[0]));
+  drawGraph(center, r.path);
+}
+function labelOf2(id){return (id||"").split(":").slice(1).join(":")||id;}
+function entityGuess(c){return null;}
+
+// ---- failure intelligence (M6) ----
+async function showPatterns(){
+  const chat=document.getElementById("chat");
+  const msg=el("div","msg"); msg.appendChild(el("div","q","⚡ Failure patterns & lessons learned"));
+  chat.appendChild(msg);
+  const r=await fetch(`${API}/patterns?limit=5`).then(x=>x.json());
+  r.cards.forEach(c=>{ const pc=c.precursor||{};
+    const strong = pc.precursor_code && pc.matched/pc.target_total>=0.5;
+    const card=el("div","ans"); card.style.marginBottom="8px";
+    card.innerHTML=`<b>${c.equipment}</b> · ${c.count}× ${c.failure_name} over ${c.span_years} yrs
+      ${strong?`<div class="path" style="margin-top:6px">⚠ ${pc.precursor_name} preceded ${pc.matched}/${pc.target_total} events within ${pc.window_days}d — a leading indicator</div>`:""}
+      <div style="color:#8b98a8;font-size:13px;margin-top:4px">${c.recommendation}</div>`;
+    const cw=el("div","cites");
+    (c.evidence||[]).slice(0,6).forEach(id=>{const ch=el("div","cite",id);
+      ch.onclick=()=>showSource({doc_id:id.startsWith("WO")?"DOC-WO-001":id}); cw.appendChild(ch);});
+    card.appendChild(cw); msg.appendChild(card);
+  });
+  const cr=await fetch(`${API}/patterns/cause`,{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({wo_text:"mechanical seal leak on P-101A, oil on baseplate"})}).then(x=>x.json());
+  if(cr.causes&&cr.causes.length){ const c=el("div","ans");
+    c.innerHTML=`<b>Anticipate (N3):</b> a new work order “${cr.input}” →
+      probable cause <b style="color:#f87171">${cr.causes[0].name}</b>
+      <span class="muted">(${cr.causes[0].basis})</span><br>
+      <span class="muted" style="font-size:12px">${cr.note}</span>`;
+    msg.appendChild(c);}
+  chat.scrollTop=chat.scrollHeight;
+}
+
+// ---- helpers: animated numbers ----
+function animNum(elm, to, prefix="", suffix=""){
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce){ elm.textContent=prefix+to+suffix; return; }
+  const t0=performance.now(), dur=550;
+  (function tick(t){ const p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+    elm.textContent=prefix+Math.round(to*e)+suffix;
+    if(p<1)requestAnimationFrame(tick); })(t0);
+}
+
+// ---- TIME-LENS: 5-year failure replay (the N3 story, watchable) ----
+async function showReplay(tag="P-101A"){
+  const chat=document.getElementById("chat");
+  const msg=el("div","msg");
+  msg.appendChild(el("div","q",`⏪ Time-Lens — 5 years of ${tag} in 12 seconds`));
+  const ans=el("div","ans"); msg.appendChild(ans); chat.appendChild(msg);
+  chat.scrollTop=chat.scrollHeight;
+  const data=await fetch(`${API}/timeline/${tag}`).then(r=>r.json());
+  const evs=data.events||[];
+  if(!evs.length){ ans.innerHTML="No dated history for this asset."; return; }
+
+  const W=1000,H=150,PAD=46;
+  const t=s=>new Date(s).getTime();
+  const t0=t(evs[0].date), t1=t(evs[evs.length-1].date)||t0+1;
+  const X=d=>PAD+(W-2*PAD)*(t(d)-t0)/Math.max(1,(t1-t0));
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const style=(e)=> e.codes.includes("ELP")?{c:"#f87171",r:7,y:56}
+              : e.codes.includes("VIB")?{c:"#f59e0b",r:5.5,y:86}
+              : e.codes.length?{c:"#7d8da0",r:4,y:104}:{c:"#33414f",r:2,y:118};
+  let svg=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Failure timeline for ${tag}">`;
+  svg+=`<line x1="${PAD}" y1="122" x2="${W-PAD}" y2="122" stroke="#2b3a49" stroke-width="1.5"/>`;
+  for(let y=new Date(evs[0].date).getFullYear(); y<=new Date(evs[evs.length-1].date).getFullYear()+1; y++){
+    const x=X(`${y}-01-01`); if(x>=PAD&&x<=W-PAD)
+      svg+=`<line x1="${x}" y1="118" x2="${x}" y2="126" stroke="#2b3a49"/>`+
+           `<text x="${x}" y="142" text-anchor="middle" font-size="11" fill="#5c6b7a" font-family="monospace">${y}</text>`;
+  }
+  // precursor links: VIB within 30 days before an ELP event
+  const day=86400000; let delay=0, links="", dots="";
+  const elps=evs.filter(e=>e.codes.includes("ELP"));
+  const vibs=evs.filter(e=>e.codes.includes("VIB")&&!e.codes.includes("ELP"));
+  evs.forEach((e,i)=>{ const s=style(e); delay=reduce?0:i*95;
+    dots+=`<circle class="tl-dot" style="animation-delay:${delay}ms" cx="${X(e.date)}" cy="${s.y}" r="${s.r}"
+      fill="${s.c}" stroke="#0c1116" stroke-width="1.5"><title>${e.id} ${e.date} ${e.codes.join(",")||"routine"}: ${e.text}</title></circle>`;});
+  let matched=0;
+  const sealElps=elps.filter(e=>/seel|seal/i.test(e.text));   // verdict counts true seal events
+  sealElps.forEach(el2=>{ const v=vibs.filter(v=>t(el2.date)-t(v.date)>0 && t(el2.date)-t(v.date)<=30*day)
+      .sort((a,b)=>t(b.date)-t(a.date))[0];
+    if(v){ matched++;
+      links+=`<path class="tl-link" style="animation-delay:${reduce?0:delay+400}ms"
+        d="M ${X(v.date)} ${style(v).y-8} Q ${(X(v.date)+X(el2.date))/2} 26 ${X(el2.date)} ${style(el2).y-9}"
+        fill="none" stroke="#f59e0b" stroke-width="1.6" opacity=".85"/>`;}});
+  svg+=links+dots+"</svg>";
+  const wrap=el("div","tl-wrap",svg);
+  ans.appendChild(wrap);
+  ans.appendChild(el("div","tl-cap",
+    `<span><i style="background:#f87171"></i>seal failure (ELP)</span>
+     <span><i style="background:#f59e0b"></i>high vibration (VIB)</span>
+     <span><i style="background:#7d8da0"></i>other issue</span>
+     <span><i style="background:#33414f"></i>routine work</span>`));
+  const verdict=el("div","ans tl-verdict");
+  verdict.style.cssText=`margin-top:8px;border-color:#f59e0b;animation-delay:${reduce?0:delay+900}ms`;
+  verdict.innerHTML=`<b style="color:#f59e0b">⚠ Pattern discovered:</b> vibration preceded
+    <b>${matched}/${sealElps.length}</b> mechanical-seal failures within 30 days — mined into
+    the graph as <code>ELP —[HAS_CAUSE]→ VIB</code>. <span style="color:#8b98a8">Next time the
+    vibration rises, ${tag} warns <i>before</i> it leaks.</span>`;
+  msg.appendChild(verdict);
+  chat.scrollTop=chat.scrollHeight;
+}
+
+// ---- boot ----
+const samples=document.getElementById("samples");
+SAMPLES.forEach(s=>{const c=el("div","chip",s.length>52?s.slice(0,50)+"…":s);
+  c.title=s; c.onclick=()=>{document.getElementById("q").value=s; ask(s);}; samples.appendChild(c);});
+const pchip=el("div","chip","⚡ Failure patterns"); pchip.style.borderColor="#f59e0b";
+pchip.onclick=showPatterns; samples.appendChild(pchip);
+const tchip=el("div","chip","⏪ Time-Lens replay"); tchip.style.borderColor="#f87171";
+tchip.title="Watch 5 years of P-101A history play out"; tchip.onclick=()=>showReplay("P-101A");
+samples.appendChild(tchip);
+document.getElementById("askForm").addEventListener("submit",e=>{e.preventDefault();
+  const q=document.getElementById("q").value.trim(); if(q) ask(q);});
+legend();
+fetch(`${API}/graph/summary`).then(r=>r.json()).then(s=>{
+  const h=document.getElementById("hstat");
+  h.innerHTML=`<span class="dot"></span><span id="hN">0</span> nodes · <span id="hE">0</span> edges · linkage ${s.linkage.pct}%`;
+  animNum(document.getElementById("hN"), s.nodes);
+  animNum(document.getElementById("hE"), s.edges);
+  document.getElementById("fstat").textContent=`corpus graph: ${s.nodes} nodes / ${s.edges} edges`;
+});
+// live ingest
+try{ const ws=new WebSocket((location.origin.replace("http","ws"))+"/ws");
+  ws.onmessage=ev=>{const m=JSON.parse(ev.data); if(m.type==="graph.delta"){
+    const t=document.getElementById("toast");
+    t.textContent=`⚡ Ingested ${m.doc_id} (+${m.nodes_added} nodes, +${m.edges_added} edges) → ${m.graph.nodes} total`;
+    t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),4000);
+    fetch(`${API}/graph/summary`).then(r=>r.json()).then(s=>{
+      document.getElementById("hstat").innerHTML=`<span class="dot"></span>${s.nodes} nodes · ${s.edges} edges · linkage ${s.linkage.pct}%`;});
+  }};
+}catch(e){}
+</script>
+</body>
+</html>

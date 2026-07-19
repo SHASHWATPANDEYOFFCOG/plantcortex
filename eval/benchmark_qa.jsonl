@@ -1,0 +1,30 @@
+{"tier": "T1", "question": "What does OISD-STD-105 clause 7.3 require before confined space entry?", "expects": ["gas", "atmosphere"], "docs": ["OISD-STD-105"]}
+{"tier": "T1", "question": "Which standard governs the work permit system?", "expects": ["OISD-STD-105"], "docs": ["OISD-STD-105"]}
+{"tier": "T1", "question": "Which SOP covers mechanical seal replacement on the charge pumps?", "expects": ["SOP-21"], "docs": ["SOP-21"]}
+{"tier": "T1", "question": "What failure mode code corresponds to external leakage?", "expects": ["ELP"], "docs": []}
+{"tier": "T1", "question": "What is equipment V-201?", "expects": ["surge", "drum"], "docs": []}
+{"tier": "T1", "question": "What severity was incident INC-2024-011 at the feed surge drum?", "expects": ["near-miss"], "docs": ["INC-2024-011"]}
+{"tier": "T1", "question": "What does SOP-09 cover?", "expects": ["lock", "loto"], "docs": ["SOP-09"]}
+{"tier": "T1", "question": "What type of equipment is P-101A?", "expects": ["pump"], "docs": []}
+{"tier": "T1", "question": "Which standard requires periodic condition monitoring of rotating equipment?", "expects": ["OISD-GDN-176"], "docs": ["OISD-GDN-176"]}
+{"tier": "T1", "question": "Which SOP is the hot work permit procedure?", "expects": ["SOP-12"], "docs": ["SOP-12"]}
+{"tier": "T2", "question": "Which pump had repeated seal failures and an overdue inspection and appears in a near-miss report?", "expects": ["P-101A"], "docs": ["INC-2022-014"]}
+{"tier": "T2", "question": "What is the leading indicator of mechanical seal failure on P-101A?", "expects": ["vibration"], "docs": []}
+{"tier": "T2", "question": "Which equipment is downstream of control valve FV-112?", "expects": ["E-301"], "docs": []}
+{"tier": "T2", "question": "What procedure and standard apply to entering feed surge drum V-201?", "expects": ["SOP-17", "OISD-STD-105"], "docs": ["SOP-17"]}
+{"tier": "T2", "question": "Which incidents involve pump P-101A?", "expects": ["INC-2022-014"], "docs": ["INC-2022-014"]}
+{"tier": "T2", "question": "What failure modes has P-101A exhibited over its history?", "expects": ["ELP", "VIB"], "docs": []}
+{"tier": "T2", "question": "Which pumps are fed from slop tank T-401?", "expects": ["P-101A", "P-101B"], "docs": []}
+{"tier": "T2", "question": "What confined-space obligation does the entry procedure for V-201 fail to address?", "expects": ["gas"], "docs": ["SOP-17"]}
+{"tier": "T2", "question": "What tacit knowledge do we have about P-101A seal behaviour?", "expects": ["vibration"], "docs": ["VN-001"]}
+{"tier": "T2", "question": "Which control element connects the charge pumps to heat exchanger E-301?", "expects": ["FV-112"], "docs": []}
+{"tier": "T2", "question": "What preceded the mechanical seal failures on P-101A?", "expects": ["vibration"], "docs": []}
+{"tier": "T2", "question": "Which equipment does the confined space entry SOP govern?", "expects": ["V-201"], "docs": ["SOP-17"]}
+{"tier": "T3", "question": "What failure patterns recur across the plant over the last five years?", "expects": ["P-101A"], "docs": []}
+{"tier": "T3", "question": "What are the main reliability risks in Unit 2?", "expects": ["P-101A"], "docs": []}
+{"tier": "T3", "question": "Summarize the recurring equipment problems across the corpus.", "expects": ["P-101A"], "docs": []}
+{"tier": "T3", "question": "Which asset is the biggest reliability concern overall?", "expects": ["P-101A"], "docs": []}
+{"tier": "T3", "question": "What proactive maintenance themes should be prioritized plant-wide?", "expects": ["P-101A"], "docs": []}
+{"tier": "T3", "question": "What cross-cutting failure themes emerge from five years of history?", "expects": ["P-101A"], "docs": []}
+{"tier": "T3", "question": "What lessons-learned emerge from the incident and work-order history?", "expects": ["P-101A"], "docs": []}
+{"tier": "T3", "question": "Over the last five years, what should the reliability team focus on?", "expects": ["P-101A"], "docs": []}

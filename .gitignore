@@ -1,0 +1,34 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+
+# Env / secrets
+.env
+.env.local
+
+# Runtime data (generated / caches)
+data/graph/
+data/vectors/
+data/cache/
+data/uploads/
+data/communities.json
+data/app.db
+*.log
+
+# Node / Next.js
+web/node_modules/
+web/.next/
+web/out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep seed corpus tracked, but ignore large regenerated binaries if any
+# (seed generator is deterministic; commit outputs or regenerate with `make seed`)

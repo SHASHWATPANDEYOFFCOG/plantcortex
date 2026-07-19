@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plantcortex"
+version = "0.1.0"
+description = "PlantCortex - Unified Asset & Operations Brain (Industrial Knowledge Intelligence)"
+requires-python = ">=3.11"
+dependencies = [
+    # D1 (ontology + seed corpus)
+    "pydantic>=2,<3",
+    "pandas",
+    "openpyxl",
+    "matplotlib",
+    "Pillow",
+    "fpdf2",
+    # Runtime deps for M1–M7 live in requirements.txt (single source for installs)
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
+
+[tool.setuptools]
+# Explicit package list keeps setuptools from scanning data/ web/ etc.
+packages = ["core", "pipelines", "agents", "api", "eval", "scripts"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

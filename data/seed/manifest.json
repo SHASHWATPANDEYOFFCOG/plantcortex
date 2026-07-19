@@ -1,0 +1,229 @@
+{
+  "plant": "Prayag Petro Refinery - Unit 2",
+  "generated": "2026-07-10T02:02:57.051325",
+  "documents": [
+    {
+      "doc_id": "PID-U2-001",
+      "filename": "pnid/PID-U2-001.png",
+      "doc_type": "pnid",
+      "source_kind": "image",
+      "page_count": 1,
+      "layer_file": "pnid/PID-U2-001.layer.json"
+    },
+    {
+      "doc_id": "DOC-WO-001",
+      "filename": "work_orders/work_orders.xlsx",
+      "doc_type": "work_order",
+      "source_kind": "xlsx",
+      "page_count": 1,
+      "row_count": 602
+    },
+    {
+      "doc_id": "SOP-05",
+      "filename": "sops/SOP-05.pdf",
+      "doc_type": "sop",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "SOP-09",
+      "filename": "sops/SOP-09.pdf",
+      "doc_type": "sop",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "SOP-12",
+      "filename": "sops/SOP-12.pdf",
+      "doc_type": "sop",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "SOP-17",
+      "filename": "sops/SOP-17.pdf",
+      "doc_type": "sop",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "SOP-21",
+      "filename": "sops/SOP-21.pdf",
+      "doc_type": "sop",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "SOP-24",
+      "filename": "sops/SOP-24.pdf",
+      "doc_type": "sop",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "SOP-30",
+      "filename": "sops/SOP-30.pdf",
+      "doc_type": "sop",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "OISD-STD-105",
+      "filename": "regulatory/OISD-STD-105.pdf",
+      "doc_type": "regulatory",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "FACT-ACT",
+      "filename": "regulatory/FACT-ACT.pdf",
+      "doc_type": "regulatory",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "PESA-EL-11",
+      "filename": "regulatory/PESA-EL-11.pdf",
+      "doc_type": "regulatory",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "OISD-STD-106",
+      "filename": "regulatory/OISD-STD-106.pdf",
+      "doc_type": "regulatory",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "OISD-GDN-176",
+      "filename": "regulatory/OISD-GDN-176.pdf",
+      "doc_type": "regulatory",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2022-014",
+      "filename": "incidents/INC-2022-014.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2023-006",
+      "filename": "incidents/INC-2023-006.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2025-003",
+      "filename": "incidents/INC-2025-003.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2024-011",
+      "filename": "incidents/INC-2024-011.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2022-021",
+      "filename": "incidents/INC-2022-021.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2023-018",
+      "filename": "incidents/INC-2023-018.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2021-009",
+      "filename": "incidents/INC-2021-009.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2024-002",
+      "filename": "incidents/INC-2024-002.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2025-010",
+      "filename": "incidents/INC-2025-010.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INC-2022-030",
+      "filename": "incidents/INC-2022-030.pdf",
+      "doc_type": "incident",
+      "source_kind": "pdf",
+      "page_count": 1
+    },
+    {
+      "doc_id": "INSP-001",
+      "filename": "inspections/INSP-001.pdf",
+      "doc_type": "inspection",
+      "source_kind": "image",
+      "page_count": 1,
+      "overdue": true,
+      "equipment": "P-101A"
+    },
+    {
+      "doc_id": "INSP-002",
+      "filename": "inspections/INSP-002.pdf",
+      "doc_type": "inspection",
+      "source_kind": "image",
+      "page_count": 1,
+      "overdue": false,
+      "equipment": "V-201"
+    },
+    {
+      "doc_id": "INSP-003",
+      "filename": "inspections/INSP-003.pdf",
+      "doc_type": "inspection",
+      "source_kind": "image",
+      "page_count": 1,
+      "overdue": false,
+      "equipment": "E-301"
+    },
+    {
+      "doc_id": "INSP-004",
+      "filename": "inspections/INSP-004.pdf",
+      "doc_type": "inspection",
+      "source_kind": "image",
+      "page_count": 1,
+      "overdue": false,
+      "equipment": "PT-108"
+    },
+    {
+      "doc_id": "INSP-005",
+      "filename": "inspections/INSP-005.pdf",
+      "doc_type": "inspection",
+      "source_kind": "image",
+      "page_count": 1,
+      "overdue": false,
+      "equipment": "T-401"
+    },
+    {
+      "doc_id": "VN-001",
+      "filename": "voice/VN-001.wav",
+      "doc_type": "voice_note",
+      "source_kind": "voice",
+      "page_count": 0,
+      "transcript_file": "voice/VN-001.txt"
+    }
+  ]
+}

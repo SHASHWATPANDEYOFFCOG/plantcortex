@@ -1,0 +1,21 @@
+# PlantCortex — pinned-ish runtime deps. See pyproject.toml for the source of truth.
+# D1 (ontology + seed corpus generator) — verified installing on Python 3.14.
+pydantic>=2,<3
+pandas
+openpyxl
+matplotlib
+Pillow
+fpdf2
+
+# D2 (M1 ingestion + API) and D3 (M2 P&ID vision)
+networkx
+rank-bm25
+pypdf
+fastapi
+uvicorn
+websockets
+python-multipart
+google-genai
+python-dotenv
+opencv-python-headless
+pytest

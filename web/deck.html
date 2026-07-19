@@ -1,0 +1,367 @@
+<title>PlantCortex — Pitch Deck</title>
+<style>
+  :root{
+    --ground:#0a0f15; --panel:#111924; --panel2:#0c141d; --line:#1e2b38;
+    --ink:#e9eff5; --muted:#8494a3; --faint:#5c6b7a;
+    --accent:#38bdf8; --accent-deep:#0e7490;
+    --ok:#22d3a5; --gap:#f5a623; --danger:#f87171;
+    --grid:rgba(56,189,248,.05); --glow:rgba(56,189,248,.14);
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,"Segoe UI",system-ui,Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --ground:#eaf1f7; --panel:#ffffff; --panel2:#f3f7fb; --line:#d3dfea;
+      --ink:#0e1a24; --muted:#51606e; --faint:#8397a7;
+      --accent:#0e86c4; --accent-deep:#0e7490;
+      --ok:#0f9e78; --gap:#bf7d10; --danger:#d4483f;
+      --grid:rgba(14,134,196,.07); --glow:rgba(14,134,196,.10);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0a0f15; --panel:#111924; --panel2:#0c141d; --line:#1e2b38;
+    --ink:#e9eff5; --muted:#8494a3; --faint:#5c6b7a;
+    --accent:#38bdf8; --accent-deep:#0e7490; --ok:#22d3a5; --gap:#f5a623; --danger:#f87171;
+    --grid:rgba(56,189,248,.05); --glow:rgba(56,189,248,.14);
+  }
+  :root[data-theme="light"]{
+    --ground:#eaf1f7; --panel:#ffffff; --panel2:#f3f7fb; --line:#d3dfea;
+    --ink:#0e1a24; --muted:#51606e; --faint:#8397a7;
+    --accent:#0e86c4; --accent-deep:#0e7490; --ok:#0f9e78; --gap:#bf7d10; --danger:#d4483f;
+    --grid:rgba(14,134,196,.07); --glow:rgba(14,134,196,.10);
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  #deck{
+    position:fixed;inset:0;background:var(--ground);color:var(--ink);
+    font-family:var(--sans);overflow:hidden;
+    background-image:
+      linear-gradient(var(--grid) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:34px 34px;
+  }
+  .slide{
+    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+    padding:clamp(28px,6vw,96px);opacity:0;visibility:hidden;
+    transform:translateY(14px);transition:opacity .45s ease,transform .45s ease;
+    max-width:1180px;margin:0 auto;
+  }
+  .slide.active{opacity:1;visibility:visible;transform:none}
+  @media (prefers-reduced-motion:reduce){.slide{transition:none}}
+
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:22px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);opacity:.8}
+  h1{font-size:clamp(38px,7vw,86px);line-height:1.02;letter-spacing:-.03em;margin:0;
+    font-weight:800;text-wrap:balance}
+  h2{font-size:clamp(26px,4.4vw,46px);line-height:1.06;letter-spacing:-.02em;margin:0 0 18px;
+    font-weight:750;text-wrap:balance}
+  .lead{font-size:clamp(16px,1.9vw,21px);color:var(--muted);max-width:60ch;line-height:1.5}
+  .tag{font-family:var(--mono);color:var(--accent);font-weight:600}
+  b.hi{color:var(--ink)}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* title */
+  .title .brand{display:flex;align-items:baseline;gap:2px;font-weight:850;
+    font-size:clamp(40px,7.5vw,92px);letter-spacing:-.035em}
+  .title .brand span{color:var(--accent)}
+  .title .thesis{font-family:var(--mono);color:var(--muted);margin-top:14px;font-size:clamp(14px,1.8vw,19px);
+    letter-spacing:.04em}
+  .title .meta{margin-top:44px;display:flex;flex-wrap:wrap;gap:10px}
+  .pill{font-family:var(--mono);font-size:12.5px;border:1px solid var(--line);border-radius:999px;
+    padding:7px 13px;color:var(--muted);background:var(--panel)}
+  .pill.on{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+
+  /* generic content */
+  .grid{display:grid;gap:16px;margin-top:6px}
+  .cols-2{grid-template-columns:1fr 1fr}
+  .cols-3{grid-template-columns:repeat(3,1fr)}
+  .cols-4{grid-template-columns:repeat(4,1fr)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 18px}
+  .card .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .card h3{margin:8px 0 6px;font-size:18px;letter-spacing:-.01em}
+  .card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.5}
+  .n{font-family:var(--mono);font-weight:700;color:var(--accent);font-size:12px}
+
+  /* stat tiles */
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .stat .v{font-size:clamp(30px,4.4vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1;
+    font-variant-numeric:tabular-nums}
+  .stat .l{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);margin-top:10px}
+  .stat.ok .v{color:var(--ok)} .stat.amber .v{color:var(--gap)} .stat.cyan .v{color:var(--accent)}
+
+  /* N1 convergence diagram */
+  .converge{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(14px,4vw,60px);
+    margin-top:26px}
+  .sources{display:flex;flex-direction:column;gap:10px}
+  .src{font-family:var(--mono);font-size:13px;border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:8px;padding:10px 12px;background:var(--panel);color:var(--muted);position:relative}
+  .src b{color:var(--ink)}
+  .node{width:clamp(96px,15vw,150px);height:clamp(96px,15vw,150px);border-radius:50%;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    border:2px solid var(--accent);background:radial-gradient(circle at 50% 35%,var(--glow),transparent 70%);
+    box-shadow:0 0 0 8px color-mix(in srgb,var(--accent) 8%,transparent)}
+  .node .t{font-family:var(--mono);font-weight:800;font-size:clamp(18px,2.6vw,26px);color:var(--accent);letter-spacing:-.02em}
+  .node .s{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:4px}
+  .converge .right{color:var(--muted);font-size:15px;line-height:1.5}
+
+  /* pipeline */
+  .flow{display:flex;align-items:stretch;gap:0;margin-top:26px;flex-wrap:wrap}
+  .step{flex:1;min-width:150px;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:16px;position:relative;margin-right:26px;margin-bottom:14px}
+  .step:last-child{margin-right:0}
+  .step::after{content:"";position:absolute;right:-22px;top:50%;width:20px;height:2px;background:var(--accent);opacity:.55}
+  .step:last-child::after{display:none}
+  .step .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .step h4{margin:8px 0 4px;font-size:15.5px}
+  .step p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+
+  /* bars */
+  .bars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:20px}
+  .barcol .cap{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:10px;letter-spacing:.06em}
+  .bar{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+  .bar .name{font-family:var(--mono);font-size:11px;color:var(--faint);width:58px;text-align:right}
+  .track{flex:1;height:22px;background:var(--panel2);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative}
+  .fill{height:100%;border-radius:5px 0 0 5px}
+  .fill.base{background:var(--faint);opacity:.6}
+  .fill.hyb{background:var(--accent)}
+  .bar .val{font-family:var(--mono);font-size:12px;width:38px;font-variant-numeric:tabular-nums}
+
+  /* lists */
+  .beats{display:grid;grid-template-columns:1fr 1fr;gap:12px 30px;margin-top:20px}
+  .beat{display:flex;gap:14px;align-items:flex-start}
+  .beat .i{font-family:var(--mono);color:var(--accent);font-weight:700;font-size:13px;min-width:22px}
+  .beat p{margin:0;font-size:14.5px;line-height:1.45}.beat p b{color:var(--ink)}
+  .beat p span{color:var(--muted)}
+
+  .footline{position:fixed;left:clamp(28px,6vw,96px);bottom:22px;font-family:var(--mono);font-size:11px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+
+  /* chrome */
+  .rail{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:20;transition:width .4s ease;
+    box-shadow:0 0 10px var(--glow)}
+  .nav{position:fixed;bottom:20px;right:clamp(24px,5vw,72px);display:flex;align-items:center;gap:14px;z-index:20}
+  .dots{display:flex;gap:7px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--line);border:0;padding:0;cursor:pointer}
+  .dot.on{background:var(--accent);box-shadow:0 0 8px var(--glow)}
+  .arrow{background:var(--panel);border:1px solid var(--line);color:var(--ink);width:38px;height:38px;
+    border-radius:10px;cursor:pointer;font-size:18px;line-height:1}
+  .arrow:hover{border-color:var(--accent)}
+  .counter{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .themebtn{position:fixed;top:16px;right:clamp(24px,5vw,72px);z-index:20;background:var(--panel);
+    border:1px solid var(--line);color:var(--muted);font-family:var(--mono);font-size:11px;
+    padding:6px 11px;border-radius:8px;cursor:pointer;letter-spacing:.08em}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  @media (max-width:720px){
+    .cols-2,.cols-3,.cols-4,.converge,.bars,.beats{grid-template-columns:1fr;display:grid}
+    .converge{gap:18px}.flow{flex-direction:column}.step{margin-right:0}.step::after{display:none}
+  }
+</style>
+
+<div class="rail" id="rail"></div>
+<button class="themebtn" id="themebtn">◐ THEME</button>
+
+<div id="deck">
+
+  <!-- 1 · TITLE -->
+  <section class="slide title active">
+    <div class="eyebrow">ET AI Hackathon 2026 · Problem Statement 8</div>
+    <div class="brand">Plant<span>Cortex</span></div>
+    <div class="thesis">The unified asset &amp; operations brain — <b class="hi" style="color:var(--ink)">from pixels to prediction</b></div>
+    <p class="lead" style="margin-top:26px">One knowledge graph fusing P&amp;ID drawings, work orders, SOPs, inspections,
+      incidents and regulations — queryable, actionable, and continuously updated for the engineer at the desk and the technician in the field.</p>
+    <div class="meta">
+      <span class="pill on">1,304-node multimodal graph</span>
+      <span class="pill on">100% linkage</span>
+      <span class="pill">81 tests green</span>
+      <span class="pill">runs fully offline</span>
+    </div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="slide">
+    <div class="eyebrow">The knowledge cliff</div>
+    <h2>A plant's memory is scattered — and walking out the door.</h2>
+    <div class="grid cols-3" style="margin-top:24px">
+      <div class="card"><div class="k">Siloed</div><h3>Six formats, zero links</h3>
+        <p>A drawing, a spreadsheet, a PDF and a scan each hold a piece of the same asset. Nothing connects <span class="tag">P-101A</span> across them.</p></div>
+      <div class="card"><div class="k">Slow</div><h3>Minutes per question</h3>
+        <p>Answers mean opening folders and Ctrl-F across systems. Multi-document questions are effectively unanswerable.</p></div>
+      <div class="card"><div class="k">Fading</div><h3>Tacit expertise retires</h3>
+        <p>The senior operator who knows the pump "throws its seal when the bearing gets noisy" leaves — and the insight leaves with them.</p></div>
+    </div>
+    <p class="lead" style="margin-top:26px">"Chat with your PDFs" doesn't solve this. The knowledge has to become a <b class="hi">structured, cross-modal, causal</b> model.</p>
+    <div class="meta" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px">
+      <span class="pill on">Ingestion + KG</span><span class="pill on">Expert Copilot / RAG</span>
+      <span class="pill on">Maintenance / RCA agent</span><span class="pill on">Compliance intelligence</span>
+      <span class="pill on">Lessons-learned engine</span>
+      <span class="pill">— all five suggested build areas, one graph</span>
+    </div>
+  </section>
+
+  <!-- 3 · N1 CONVERGENCE -->
+  <section class="slide">
+    <div class="eyebrow">Novelty N1 · Cross-modal entity resolution</div>
+    <h2>Every mention of an asset resolves to one node.</h2>
+    <div class="converge">
+      <div class="sources">
+        <div class="src"><b>P&amp;ID symbol</b> — pump glyph + bbox</div>
+        <div class="src"><b>Spreadsheet row</b> — 85 work orders</div>
+        <div class="src"><b>SOP mention</b> — seal-replacement procedure</div>
+        <div class="src"><b>Compliance clause</b> — OISD-STD-105 coverage</div>
+        <div class="src"><b>Voice note</b> — the operator's warning</div>
+      </div>
+      <div class="node"><div class="t">P-101A</div><div class="s">Feed Charge Pump</div></div>
+      <div class="right">Tag normalization collapses <span class="tag">p101a</span>, <span class="tag">P-101 A</span>, <span class="tag">P101A</span>
+        to one canonical key. The drawing enriches it with <b class="hi">type</b> and location; the field data with <b class="hi">history</b>.
+        <br><br>One node, provenance from <b class="hi">four extraction modalities</b>.</div>
+    </div>
+  </section>
+
+  <!-- 4 · ARCHITECTURE -->
+  <section class="slide">
+    <div class="eyebrow">Architecture · pixels → prediction</div>
+    <h2>A hybrid pipeline, not a raw LLM.</h2>
+    <div class="flow">
+      <div class="step"><div class="k">Ingest</div><h4>Parse · TLP · extract</h4><p>OpenCV reads P&amp;ID connectivity from pixels; ontology-constrained extraction on text.</p></div>
+      <div class="step"><div class="k">Resolve</div><h4>Cross-modal merge</h4><p>N1 collapses every mention to one typed node with provenance.</p></div>
+      <div class="step"><div class="k">Graph</div><h4>Knowledge graph</h4><p>Idempotent MERGE upsert; every fact keeps a citable source.</p></div>
+      <div class="step"><div class="k">Reason</div><h4>PPR · GraphRAG</h4><p>Personalized PageRank for multi-hop; community summaries for patterns.</p></div>
+      <div class="step"><div class="k">Act</div><h4>Copilot · agents</h4><p>Cited answers, compliance scan, failure anticipation.</p></div>
+    </div>
+    <p class="lead" style="margin-top:26px">Grounded in five research threads — <span class="tag">PID2Graph/Relationformer</span>,
+      <span class="tag">HippoRAG</span>, <span class="tag">GraphRAG</span>, <span class="tag">NIST TLP</span>, <span class="tag">ontology-guided FMEA</span> —
+      each solving in isolation what PlantCortex fuses.</p>
+  </section>
+
+  <!-- 5 · N2 + N3 -->
+  <section class="slide">
+    <div class="eyebrow">Novelties N2 &amp; N3 · retrieve, then anticipate</div>
+    <h2>From answering questions to warning before failure.</h2>
+    <div class="grid cols-2" style="margin-top:22px">
+      <div class="card" style="border-left:3px solid var(--accent)">
+        <div class="k">N2 · Hippocampal retrieval</div>
+        <h3>Multi-hop over a multimodal graph</h3>
+        <p>Personalized PageRank seeds from typed query entities — or from a <b class="hi">photographed equipment tag</b> in the field, not just typed text. Joins facts across documents a vector search can't reach.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--gap)">
+        <div class="k">N3 · From answering to anticipating</div>
+        <h3>Learned causal edges</h3>
+        <p>A miner discovers that <span class="tag">vibration</span> precedes <span class="tag">seal leakage</span> on P-101A and writes a <span class="tag">HAS_CAUSE</span> edge. A new work order is then met with its <b class="hi">probable cause, ranked from history</b>.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px;background:var(--panel2);border-style:dashed">
+      <div class="k">Knowledge Capture — the heart of it</div>
+      <p style="font-size:15px;color:var(--ink)">A retiring operator records a voice note → transcribed, entity-linked, and instantly a citable source.
+        <b class="hi">The engineer retires. The knowledge doesn't.</b></p>
+    </div>
+  </section>
+
+  <!-- 6 · RESULTS -->
+  <section class="slide">
+    <div class="eyebrow">Evaluation · measured, not asserted</div>
+    <h2>Hybrid matches lookups, wins where it matters.</h2>
+    <div class="grid cols-4" style="margin-top:8px">
+      <div class="stat cyan"><div class="v">76%</div><div class="l">extraction recall vs gold</div></div>
+      <div class="stat ok"><div class="v">1/1</div><div class="l">compliance gap · 0 false pos</div></div>
+      <div class="stat"><div class="v">7/7</div><div class="l">P&amp;ID lines from pixels</div></div>
+      <div class="stat amber"><div class="v">&lt;1s</div><div class="l">vs minutes of manual search</div></div>
+    </div>
+    <div class="bars">
+      <div class="barcol"><div class="cap">T1 · lookup</div>
+        <div class="bar"><span class="name">baseline</span><div class="track"><div class="fill base" style="width:55%"></div></div><span class="val">55</span></div>
+        <div class="bar"><span class="name">hybrid</span><div class="track"><div class="fill hyb" style="width:55%"></div></div><span class="val">55</span></div>
+      </div>
+      <div class="barcol"><div class="cap">T2 · multi-hop</div>
+        <div class="bar"><span class="name">baseline</span><div class="track"><div class="fill base" style="width:38%"></div></div><span class="val">38</span></div>
+        <div class="bar"><span class="name">hybrid</span><div class="track"><div class="fill hyb" style="width:46%"></div></div><span class="val">46</span></div>
+      </div>
+      <div class="barcol"><div class="cap">T3 · global</div>
+        <div class="bar"><span class="name">baseline</span><div class="track"><div class="fill base" style="width:63%"></div></div><span class="val">63</span></div>
+        <div class="bar"><span class="name">hybrid</span><div class="track"><div class="fill hyb" style="width:75%"></div></div><span class="val">75</span></div>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:20px;font-size:15px">Answer accuracy, % — baseline (vector-only) vs. hybrid (graph + PPR).
+      The graph's value shows exactly where the questions get hard.</p>
+  </section>
+
+  <!-- 7 · DEMO -->
+  <section class="slide">
+    <div class="eyebrow">Live demo · seven beats</div>
+    <h2>Everything runs on stage, offline.</h2>
+    <div class="beats">
+      <div class="beat"><span class="i">01</span><p><b>Live ingest</b> — <span>drag a work-order sheet; the graph grows live over a websocket.</span></p></div>
+      <div class="beat"><span class="i">02</span><p><b>Multi-hop on mobile</b> — <span>seal failures + overdue inspection + near-miss, fully cited.</span></p></div>
+      <div class="beat"><span class="i">03</span><p><b>Baseline vs hybrid</b> — <span>toggle it off; the answer visibly degrades.</span></p></div>
+      <div class="beat"><span class="i">04</span><p><b>Compliance</b> — <span>catches the SOP-17 gas-testing gap; exports an evidence PDF.</span></p></div>
+      <div class="beat"><span class="i">05</span><p><b>Knowledge capture</b> — <span>record a note; it's cited in the very next answer.</span></p></div>
+      <div class="beat"><span class="i">06</span><p><b>Graceful refusal</b> — <span>an out-of-corpus question is declined, not hallucinated.</span></p></div>
+      <div class="beat"><span class="i">07</span><p><b>Failure intelligence</b> — <span>P-101A pattern card + probable-cause anticipation.</span></p></div>
+    </div>
+  </section>
+
+  <!-- 8 · IMPACT + ROADMAP -->
+  <section class="slide">
+    <div class="eyebrow">Business impact &amp; scale</div>
+    <h2>Faster answers, fewer surprises, retained expertise.</h2>
+    <div class="grid cols-3" style="margin-top:20px">
+      <div class="card"><div class="k">Impact</div><h3>Minutes → seconds</h3><p>~1,000 engineer-hours/yr reclaimed per unit on cross-document search; one avoided pump trip (₹15–50 lakh) pays for deployment; audit evidence prep drops from days to hours. <i>Illustrative economics — mechanism demonstrated live.</i></p></div>
+      <div class="card"><div class="k">Sovereignty</div><h3>On-prem ready</h3><p>Provider-abstracted <span class="tag">LLMClient</span> / <span class="tag">Embeddings</span> swap to on-site OSS models; no plant data leaves site.</p></div>
+      <div class="card"><div class="k">Scale</div><h3>Interfaces, not rewrites</h3><p><span class="tag">GraphRepo</span>→Neo4j and <span class="tag">VectorStore</span>→Qdrant via the existing seams. SAP-PM / Maximo + PI historian connectors next.</p></div>
+    </div>
+    <p class="lead" style="margin-top:26px">Multilingual field UI (Hindi + regional) puts the operations brain in the technician's hand — where the failures actually happen.</p>
+  </section>
+
+  <!-- 9 · CLOSE -->
+  <section class="slide title">
+    <div class="eyebrow">PlantCortex</div>
+    <h1 style="max-width:16ch">The plant already knows. Now it can tell you.</h1>
+    <p class="lead" style="margin-top:24px">A working prototype today — multimodal graph, cited copilot, field app, compliance and failure-intelligence agents,
+      an eval harness, and an offline-reliable demo. The LLM prose, VLM tag-reading and voice paths are wired and light up the moment a quota'd key is present.</p>
+    <div class="meta" style="margin-top:32px">
+      <span class="pill on">N1 cross-modal</span><span class="pill on">N2 hippocampal retrieval</span>
+      <span class="pill on">N3 anticipation</span><span class="pill">+ Knowledge Capture</span>
+    </div>
+  </section>
+
+</div>
+
+<div class="footline">PlantCortex · Prayag Petro Refinery — Unit 2</div>
+<div class="nav">
+  <button class="arrow" id="prev" aria-label="Previous slide">‹</button>
+  <span class="counter" id="counter">01 / 09</span>
+  <div class="dots" id="dots"></div>
+  <button class="arrow" id="next" aria-label="Next slide">›</button>
+</div>
+
+<script>
+  const slides=[...document.querySelectorAll(".slide")];
+  const dots=document.getElementById("dots");
+  const rail=document.getElementById("rail");
+  const counter=document.getElementById("counter");
+  let i=0;
+  slides.forEach((_,n)=>{const b=document.createElement("button");b.className="dot"+(n?"":" on");
+    b.setAttribute("aria-label","Slide "+(n+1));b.onclick=()=>go(n);dots.appendChild(b);});
+  const pad=n=>String(n).padStart(2,"0");
+  function go(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle("active",k===i));
+    [...dots.children].forEach((d,k)=>d.classList.toggle("on",k===i));
+    rail.style.width=((i+1)/slides.length*100)+"%";
+    counter.textContent=pad(i+1)+" / "+pad(slides.length);
+  }
+  document.getElementById("next").onclick=()=>go(i+1);
+  document.getElementById("prev").onclick=()=>go(i-1);
+  addEventListener("keydown",e=>{
+    if(e.key==="ArrowRight"||e.key==="PageDown"||e.key===" "){e.preventDefault();go(i+1);}
+    if(e.key==="ArrowLeft"||e.key==="PageUp"){e.preventDefault();go(i-1);}
+    if(e.key==="Home")go(0); if(e.key==="End")go(slides.length-1);
+  });
+  const tb=document.getElementById("themebtn");
+  tb.onclick=()=>{const cur=document.documentElement.getAttribute("data-theme")
+    || (matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+    document.documentElement.setAttribute("data-theme",cur==="dark"?"light":"dark");};
+  go(0);
+</script>

@@ -1,0 +1,84 @@
+abbrev,expansion
+chng,changed
+chg,changed
+repl,replaced
+rep,repaired
+seel,seal
+seal,seal
+mech seel,mechanical seal
+brg,bearing
+brng,bearing
+pmp,pump
+pmp101a,pump P-101A
+p101a,P-101A
+p101b,P-101B
+vlv,valve
+vv,valve
+xmtr,transmitter
+tx,transmitter
+insp,inspection
+inspn,inspection
+vib,vibration
+vibn,vibration
+hi,high
+hgh,high
+lo,low
+temp,temperature
+tmp,temperature
+press,pressure
+prs,pressure
+lkg,leakage
+leak,leakage
+lk,leak
+noise,noise
+noisy,noisy
+ovhtg,overheating
+ovht,overheating
+ohtg,overheating
+imp,impeller
+implr,impeller
+gskt,gasket
+gsk,gasket
+tighten,tightened
+tightnd,tightened
+lube,lubricated
+lubd,lubricated
+alignmnt,alignment
+algn,alignment
+coupl,coupling
+cplg,coupling
+gland,gland packing
+strn,strainer
+choke,choked
+chokd,choked
+plgd,plugged
+repld,replaced
+o/h,overhaul
+pm,preventive maintenance
+cm,corrective maintenance
+w/o,work order
+wo,work order
+sched,scheduled
+schd,scheduled
+maint,maintenance
+mtce,maintenance
+troub,trouble
+fault,fault
+fail,failure
+fld,failed
+motr,motor
+mtr,motor
+elec,electrical
+mech,mechanical
+inst,instrument
+opn,open
+cls,closed
+adj,adjusted
+cln,cleaned
+rmvd,removed
+instld,installed
+chkd,checked
+found,found
+susp,suspected
+abnrml,abnormal
+excsv,excessive

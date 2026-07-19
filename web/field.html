@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<title>PlantCortex Field</title>
+<style>
+  :root{--bg:#0b1016;--card:#141b24;--card2:#0f151c;--ink:#e9eef4;--muted:#8a97a7;
+    --accent:#38bdf8;--ok:#22d3a5;--warn:#f59e0b;--bad:#f87171;--border:#232f3c}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;
+       padding-bottom:72px;max-width:560px;margin:0 auto}
+  header{padding:14px 16px;border-bottom:1px solid var(--border);background:var(--card2);position:sticky;top:0;z-index:5}
+  header b{color:var(--accent)} header .s{color:var(--muted);font-size:12px}
+  .wrap{padding:14px}
+  .search{display:flex;gap:8px;margin-bottom:14px}
+  .search input{flex:1;font-size:17px;padding:14px 14px;border-radius:12px;border:1px solid var(--border);
+    background:#0a0f15;color:var(--ink)}
+  .mic,.go{border:0;border-radius:12px;padding:0 16px;font-weight:700;font-size:16px}
+  .mic{background:var(--card);color:var(--accent);border:1px solid var(--border)}
+  .mic.rec{background:var(--bad);color:#fff;animation:pulse 1s infinite}
+  @keyframes pulse{50%{opacity:.6}}
+  .go{background:var(--accent);color:#04222e}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  .chip{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:8px 12px;font-size:13px;color:var(--ink)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:12px}
+  .card h3{margin:0 0 4px;font-size:19px} .card .sub{color:var(--muted);font-size:13px;margin-bottom:10px}
+  .row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--border)}
+  .row:first-of-type{border-top:0}
+  .row .k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+  .pill{display:inline-block;padding:3px 9px;border-radius:12px;font-size:12px;font-weight:600}
+  .pill.pump{background:#0e2530;color:var(--accent)} .pill.warn{background:#2a2410;color:var(--warn)}
+  .pill.bad{background:#2a1416;color:var(--bad)} .pill.ok{background:#0e241d;color:var(--ok)}
+  .tap{color:var(--accent);font-size:13px;text-decoration:none}
+  .list .item{padding:10px 0;border-top:1px solid var(--border);font-size:14px}
+  .fm{display:inline-block;background:#2a1416;color:var(--bad);border-radius:8px;padding:3px 8px;font-size:12px;margin:3px 4px 0 0}
+  textarea{width:100%;min-height:130px;font-size:16px;padding:12px;border-radius:12px;border:1px solid var(--border);
+    background:#0a0f15;color:var(--ink)}
+  .btn{display:block;width:100%;padding:14px;border-radius:12px;border:0;font-weight:700;font-size:16px;margin-top:10px}
+  .btn.primary{background:var(--accent);color:#04222e} .btn.ghost{background:var(--card);color:var(--ink);border:1px solid var(--border)}
+  .verdict{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;margin-bottom:8px;border:1px solid var(--border)}
+  .verdict.GAP{background:#1f1214;border-color:#4a1f22} .verdict.covered{background:#0e1c18}
+  .verdict.partial{background:#211c10}
+  nav{position:fixed;bottom:0;left:0;right:0;max-width:560px;margin:0 auto;display:flex;background:var(--card2);
+    border-top:1px solid var(--border)}
+  nav button{flex:1;background:0;border:0;color:var(--muted);padding:12px 0;font-size:12px}
+  nav button.active{color:var(--accent)} nav button div{font-size:20px}
+  .muted{color:var(--muted)} .hidden{display:none}
+
+  /* ---- motion (reduced-motion safe; transform/opacity only) ---- */
+  @media (prefers-reduced-motion: no-preference){
+    section.wrap{animation:tabin .26s cubic-bezier(.22,.9,.35,1)}
+    @keyframes tabin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .card{animation:tabin .32s cubic-bezier(.22,.9,.35,1) both}
+    .chip,.btn,.go,.mic,nav button{transition:transform .15s cubic-bezier(.22,.9,.35,1),
+      border-color .15s,box-shadow .15s,background .15s}
+    .chip:active,.btn:active,.go:active,.mic:active{transform:scale(.94)}
+    .verdict{animation:tabin .3s both}
+    .verdict:nth-child(3){animation-delay:60ms}.verdict:nth-child(4){animation-delay:120ms}
+    .verdict:nth-child(5){animation-delay:180ms}
+    nav button.active div{animation:navpop .35s cubic-bezier(.34,1.45,.44,1)}
+    @keyframes navpop{50%{transform:scale(1.25)}}
+    .pill.bad{animation:alertpulse 2s ease-in-out infinite}
+    @keyframes alertpulse{50%{box-shadow:0 0 0 5px rgba(248,113,113,.12)}}
+  }
+</style>
+</head>
+<body>
+<header><div style="font-weight:800"><b>Plant</b>Cortex · Field</div><div class="s" id="hstat">…</div></header>
+
+<!-- LOOKUP -->
+<section id="tab-lookup" class="wrap">
+  <div class="search">
+    <input id="q" placeholder="Tag (P-101A) or a question…" autocomplete="off"/>
+    <button class="mic" id="mic" title="voice">🎤</button>
+    <button class="go" id="go">Go</button>
+  </div>
+  <div class="chips" id="tagchips"></div>
+  <div id="result"></div>
+</section>
+
+<!-- CAPTURE -->
+<section id="tab-capture" class="wrap hidden">
+  <div class="card">
+    <h3>Knowledge Capture</h3>
+    <div class="sub">Record a note. It becomes a citable source in the graph instantly.<br><i>"The engineer retires. The knowledge doesn't."</i></div>
+    <textarea id="note" placeholder="Speak or type what you know about an asset…"></textarea>
+    <button class="btn ghost" id="micNote">🎤 Dictate</button>
+    <button class="btn primary" id="saveNote">Capture note</button>
+    <div id="captureOut"></div>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section id="tab-compliance" class="wrap hidden">
+  <div class="card">
+    <h3>Compliance Scan</h3>
+    <div class="sub">Check whether procedures satisfy a standard's obligations.</div>
+    <div class="chips" id="stdchips"></div>
+    <button class="btn primary" id="scanBtn">Scan OISD-STD-105</button>
+    <a class="btn ghost" id="exportBtn" href="#" style="text-align:center;text-decoration:none;display:none">⬇ Export Evidence PDF</a>
+    <div id="scanOut"></div>
+  </div>
+</section>
+
+<nav>
+  <button class="active" data-tab="lookup"><div>🔎</div>Lookup</button>
+  <button data-tab="capture"><div>🎙️</div>Capture</button>
+  <button data-tab="compliance"><div>✔️</div>Compliance</button>
+</nav>
+
+<script>
+const API=location.origin;
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+const isTag=s=>/^[A-Za-z]{1,3}[- ]?\d{2,4}[A-Za-z]?$/.test(s.trim());
+const openDoc=id=>window.open(`${API}/doc/${id}`,'_blank');
+
+// tabs
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  ['lookup','capture','compliance'].forEach(t=>document.getElementById('tab-'+t).classList.toggle('hidden',t!==b.dataset.tab));
+});
+
+// ---- lookup ----
+async function doLookup(v){
+  const out=document.getElementById('result'); out.innerHTML='<div class="muted">Loading…</div>';
+  if(isTag(v)){ const d=await fetch(`${API}/equipment/${encodeURIComponent(v)}`).then(r=>r.json()); renderDossier(d,out); }
+  else { const a=await fetch(`${API}/ask`,{method:'POST',headers:{'Content-Type':'application/json'},
+           body:JSON.stringify({question:v})}).then(r=>r.json()); renderAnswer(a,out); }
+}
+function renderDossier(d,out){
+  out.innerHTML='';
+  if(!d.found){ out.appendChild(el('div','card',`No asset <b>${d.tag}</b> in the graph.`)); return; }
+  const c=el('div','card');
+  const insp = d.inspection && d.inspection.overdue ? '<span class="pill bad">INSPECTION OVERDUE</span>' :
+               (d.inspection?'<span class="pill ok">inspection OK</span>':'');
+  c.innerHTML=`<h3>${d.tag} <span class="pill pump">${d.type||''}</span></h3>
+    <div class="sub">${d.name||''} · ${d.location||''} ${insp}</div>
+    <div>${(d.failure_modes||[]).map(f=>`<span class="fm">${f.code} ×${f.count}</span>`).join('')}</div>`;
+  const sect=(title,items)=>{ if(!items||!items.length)return; c.appendChild(el('div','row',`<span class="k">${title}</span>`));
+    const l=el('div','list'); items.forEach(it=>l.appendChild(it)); c.appendChild(l); };
+  sect(`Last work orders (${d.work_order_count})`, (d.work_orders||[]).map(w=>
+     el('div','item',`<b>${w.wo_id}</b> · ${w.date||''} <span class="muted">${w.type||''}</span><br>${w.problem||''}
+        <a class="tap" onclick="openDoc('DOC-WO-001')">source ›</a>`)));
+  sect('Governing SOPs', (d.procedures||[]).map(p=>
+     el('div','item',`<b>${p.sop_id}</b> ${p.title||''} <a class="tap" onclick="openDoc('${p.sop_id}')">open ›</a>`)));
+  sect('Incidents', (d.incidents||[]).map(i=>
+     el('div','item',`<b>${i.incident_id}</b> <span class="pill warn">${i.severity}</span> ${i.date||''}
+        <a class="tap" onclick="openDoc('${i.incident_id}')">open ›</a>`)));
+  sect('Tacit knowledge', (d.tacit_notes||[]).map(n=>
+     el('div','item',`🎙️ <b>${n.author_role}</b>: “${n.transcript}” <a class="tap" onclick="openDoc('${n.note_id}')">source ›</a>`)));
+  sect('Governing standards', (d.regulatory||[]).map(r=>
+     el('div','item',`${r.standard} cl.${r.clause_no} <a class="tap" onclick="openDoc('${r.standard}')">open ›</a>`)));
+  if(d.connected_to && d.connected_to.length) c.appendChild(el('div','item',
+     `<span class="k">Connected to</span> ${d.connected_to.join(', ')}`));
+  out.appendChild(c);
+}
+function renderAnswer(a,out){
+  out.innerHTML='';
+  const c=el('div','card');
+  c.innerHTML=`<div class="sub"><span class="pill pump">${a.mode}</span> · ${Math.round(a.confidence*100)}% · ${a.latency_ms}ms</div>
+    <div>${(a.answer_markdown||'').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>')}</div>`;
+  const cw=el('div','',''); cw.style.marginTop='8px';
+  (a.citations||[]).forEach(ci=>{const b=el('a','tap',`${ci.doc_id}${ci.page?' p.'+ci.page:''} › `);
+    b.onclick=()=>openDoc(ci.doc_id); cw.appendChild(b);});
+  c.appendChild(cw); out.appendChild(c);
+}
+document.getElementById('go').onclick=()=>{const v=document.getElementById('q').value.trim(); if(v)doLookup(v);};
+document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter'){const v=e.target.value.trim();if(v)doLookup(v);}});
+
+// ---- voice (Web Speech API) ----
+function wireMic(btn, target, cb){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){ btn.style.opacity=.4; btn.title='voice not supported'; return; }
+  const rec=new SR(); rec.lang='en-US'; rec.interimResults=true;
+  let on=false;
+  btn.onclick=()=>{ if(on){rec.stop();return;} rec.start(); on=true; btn.classList.add('rec'); };
+  rec.onresult=e=>{ let t=''; for(const r of e.results)t+=r[0].transcript; target.value=t; };
+  rec.onend=()=>{ on=false; btn.classList.remove('rec'); if(cb)cb(target.value); };
+}
+wireMic(document.getElementById('mic'), document.getElementById('q'));
+wireMic(document.getElementById('micNote'), document.getElementById('note'));
+
+// ---- capture ----
+document.getElementById('saveNote').onclick=async()=>{
+  const t=document.getElementById('note').value.trim(); if(!t)return;
+  const out=document.getElementById('captureOut'); out.innerHTML='<div class="muted">Saving…</div>';
+  const r=await fetch(`${API}/capture`,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({transcript:t})}).then(x=>x.json());
+  out.innerHTML=`<div class="card" style="margin-top:12px"><b>Captured as ${r.note_id}</b> — now citable.<br>
+    Linked to: ${(r.equipment||[]).map(e=>`<span class="pill pump">${e}</span>`).join(' ')||'—'}
+    ${(r.failure_modes||[]).map(f=>`<span class="fm">${f}</span>`).join('')}
+    ${r.equipment&&r.equipment[0]?`<button class="btn ghost" onclick="askAbout('${r.equipment[0]}')">Ask about ${r.equipment[0]} ›</button>`:''}</div>`;
+};
+function askAbout(tag){ document.querySelector('nav button[data-tab=lookup]').click();
+  document.getElementById('q').value=`What do we know about ${tag}?`; doLookup(`What do we know about ${tag}, including tacit notes?`); }
+
+// ---- compliance ----
+document.getElementById('scanBtn').onclick=async()=>{
+  const out=document.getElementById('scanOut'); out.innerHTML='<div class="muted">Scanning…</div>';
+  const r=await fetch(`${API}/compliance/scan`,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({standard_id:'OISD-STD-105'})}).then(x=>x.json());
+  out.innerHTML=`<div class="sub" style="margin-top:12px">covered ${r.summary.covered} · partial ${r.summary.partial} · <b style="color:var(--bad)">GAP ${r.summary.GAP}</b></div>`;
+  r.verdicts.forEach(v=>{ const d=el('div','verdict '+v.verdict);
+    d.innerHTML=`<div><b>Clause ${v.clause_no}</b> <span class="muted">${(v.clause_text||'').slice(0,60)}…</span></div>
+      <span class="pill ${v.verdict==='GAP'?'bad':v.verdict==='covered'?'ok':'warn'}">${v.verdict.toUpperCase()}</span>`;
+    out.appendChild(d);
+    if(v.verdict==='GAP') out.appendChild(el('div','item',
+      `⚠️ ${v.procedure||'no procedure'} does not evidence: <i>${(v.clause_text||'').slice(0,110)}…</i>`));
+  });
+  const ex=document.getElementById('exportBtn'); ex.style.display='block';
+  ex.href=`${API}/compliance/report/OISD-STD-105`;
+};
+
+// boot
+['P-101A','V-201','E-301','FV-112'].forEach(t=>{const c=el('button','chip',t);
+  c.onclick=()=>{document.getElementById('q').value=t; doLookup(t);}; document.getElementById('tagchips').appendChild(c);});
+document.getElementById('stdchips').appendChild(el('span','chip','OISD-STD-105 · Work Permit System'));
+fetch(`${API}/graph/summary`).then(r=>r.json()).then(s=>document.getElementById('hstat').textContent=
+  `${s.nodes} nodes · ${s.edges} edges · linkage ${s.linkage.pct}%`);
+</script>
+</body>
+</html>

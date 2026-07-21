@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from pathlib import Path
 
 from core.embeddings import get_embeddings
 from core.graph_repo import GraphRepo

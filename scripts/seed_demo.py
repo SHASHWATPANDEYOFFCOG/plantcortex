@@ -13,7 +13,6 @@ Everything here runs without a network, so `DEMO_STRICT=1` (cache/offline only) 
 from __future__ import annotations
 
 import shutil
-from datetime import date
 
 import pandas as pd
 
@@ -43,7 +42,12 @@ def stage_reserve() -> None:
     ]
     df = pd.DataFrame(rows, columns=["WO_ID", "Date", "Equipment_Tag", "Type",
                                      "Problem_Text", "Action_Text"])
-    df.to_excel(RESERVE / "reserve_work_orders.xlsx", index=False)
+    # xlsx bytes embed a save timestamp, so an unconditional write dirties the
+    # git-tracked file on every seed run — skip when the content is unchanged
+    xlsx = RESERVE / "reserve_work_orders.xlsx"
+    if not xlsx.exists() or not df.astype(str).equals(
+            pd.read_excel(xlsx).astype(str)):
+        df.to_excel(xlsx, index=False)
     # a P&ID copy (+ sidecar) so the drawing drag also works offline
     src = settings.seed_dir / "pnid"
     for f in ("PID-U2-001.png", "PID-U2-001.layer.json"):

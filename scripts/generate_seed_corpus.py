@@ -707,7 +707,7 @@ def make_inspections() -> None:
         lines = [
             f"Equipment Tag : {tag}",
             f"Equipment     : {EQUIP_BY_TAG[tag]['name']}",
-            f"Inspection    : Periodic condition monitoring",
+            "Inspection    : Periodic condition monitoring",
             f"Last Inspected: {last.isoformat()}",
             f"Interval      : {interval} months",
             f"Next Due      : {next_due.isoformat()}",
@@ -795,8 +795,8 @@ def main() -> None:
     n_docs = len(MANIFEST)
     print(f"\nDone. {n_docs} document sources; "
           f"gold set = {len(GOLD.nodes)} nodes, {len(GOLD.edges)} edges.")
-    print(f"Manifest: data/seed/manifest.json")
-    print(f"Gold:     data/seed/gold/gold_extraction.json")
+    print("Manifest: data/seed/manifest.json")
+    print("Gold:     data/seed/gold/gold_extraction.json")
 
 
 if __name__ == "__main__":

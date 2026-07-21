@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import json
 import statistics
-from pathlib import Path
 
 from agents import m5_compliance
 from core.config import ROOT, settings
@@ -71,8 +70,9 @@ def score_answer(ans, expects, docs) -> tuple[float, float]:
 
 
 def qa_benchmark(repos) -> dict:
-    qs = [json.loads(l) for l in
-          (EVAL_DIR / "benchmark_qa.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
+    qs = [json.loads(line) for line in
+          (EVAL_DIR / "benchmark_qa.jsonl").read_text(encoding="utf-8").splitlines()
+          if line.strip()]
     conditions = {
         "vector_only": lambda q: ask(q, repos, baseline=True),
         "graph_only": lambda q: ask(q, repos, graph_only=True),
@@ -106,11 +106,11 @@ def _mean(xs):
     return round(statistics.mean(xs) * 100, 1) if xs else 0.0
 
 
-def render(repos, ext, qa, comp) -> str:
+def render(repos, size, ext, qa, comp) -> str:
     link = repos.graph.summary()["linkage"]
     L = ["# PlantCortex — Evaluation Report", "",
-         f"Corpus graph: **{repos.graph.g.number_of_nodes()} nodes / "
-         f"{repos.graph.g.number_of_edges()} edges**. Offline (deterministic) pipeline; "
+         f"Corpus graph: **{size[0]} nodes / {size[1]} edges**. "
+         "Offline (deterministic) pipeline; "
          "LLM answer synthesis layers on when quota is available.", ""]
 
     L += ["## 1. Extraction recall vs gold set", "",
@@ -164,13 +164,16 @@ def render(repos, ext, qa, comp) -> str:
 
 def main() -> None:
     repos = make_repos(fresh=False)
+    # snapshot BEFORE the evals run: the compliance scan upserts into the
+    # in-memory graph, and the report must state the as-seeded corpus size
+    size = (repos.graph.g.number_of_nodes(), repos.graph.g.number_of_edges())
     print("Running extraction eval…")
     ext = extraction_recall(repos)
     print("Running QA benchmark (3 conditions)…")
     qa = qa_benchmark(repos)
     print("Running compliance eval…")
     comp = compliance_eval(repos)
-    report = render(repos, ext, qa, comp)
+    report = render(repos, size, ext, qa, comp)
     (EVAL_DIR / "report.md").write_text(report, encoding="utf-8")
     print(f"\nWrote {EVAL_DIR / 'report.md'}")
     print(f"Extraction recall: {ext['overall']}% | "

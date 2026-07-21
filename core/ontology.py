@@ -21,6 +21,7 @@ Design notes
 
 from __future__ import annotations
 
+import re
 from datetime import date, datetime
 from enum import Enum
 from typing import Annotated, Literal, Optional, Union
@@ -398,8 +399,6 @@ class ExtractionResult(BaseModel):
 # --------------------------------------------------------------------------- #
 # Helpers
 # --------------------------------------------------------------------------- #
-import re
-
 _TAG_RE = re.compile(r"^([A-Za-z]+)[\s\-_]*(\d+)[\s\-_]*([A-Za-z])?$")
 
 

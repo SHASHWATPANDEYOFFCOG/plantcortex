@@ -35,9 +35,9 @@ answer, then the evidence. Never bluff — the honest framing is stronger than a
 > Scanned drawings use the VLM path instead. We separated the two deliberately, following
 > the 2025–26 benchmark finding that raw VLMs are unreliable on diagram detail.
 
-**Q. "Your extraction recall is 76%, not 100%. Why?"**
+**Q. "Your extraction recall is 77%, not 100%. Why?"**
 > 100% on every core type — Equipment, FailureMode, Incident, Procedure, RegulatoryClause,
-> WorkOrder, TacitNote. The 76% is dragged down by `Component`, `HAS_CAUSE`, and `PART_OF`,
+> WorkOrder, TacitNote. The 77% is dragged down by `Component`, `HAS_CAUSE`, and `PART_OF`,
 > which by design come from P&ID component detection and the M6 causal miner, not the
 > offline text pass. We **report that honestly in the eval** rather than hiding it — and
 > the miner does learn `HAS_CAUSE` (vibration→seal) from the data, which is the N3 story.
@@ -126,4 +126,4 @@ answer, then the evidence. Never bluff — the honest framing is stronger than a
 - "Great question — the honest answer is…" (judges reward candor over spin).
 - Redirect to a live proof: "Let me *show* you rather than tell you" → baseline toggle,
   refusal, or the compliance PDF.
-- Know your three numbers cold: **1,304-node graph · 100% linkage · compliance 1/1, 0 FP.**
+- Know your three numbers cold: **1,314-node graph · 100% linkage · compliance 1/1, 0 FP.**

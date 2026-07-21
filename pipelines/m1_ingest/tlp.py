@@ -11,7 +11,6 @@ from __future__ import annotations
 import csv
 import re
 from functools import lru_cache
-from pathlib import Path
 
 from core.config import ROOT
 

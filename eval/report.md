@@ -1,6 +1,6 @@
 # PlantCortex — Evaluation Report
 
-Corpus graph: **1304 nodes / 2267 edges**. Offline (deterministic) pipeline; LLM answer synthesis layers on when quota is available.
+Corpus graph: **1314 nodes / 2869 edges**. Offline (deterministic) pipeline; LLM answer synthesis layers on when quota is available.
 
 ## 1. Extraction recall vs gold set
 
@@ -50,8 +50,8 @@ Overall answer accuracy — vector_only 50.0% · graph_only 50.0% · **hybrid 56
 | Tier | manual search | PlantCortex (median) | speed-up |
 |---|---|---|---|
 | T1 | ~1 min 35s | 0.00 s | ~9500x |
-| T2 | ~5 min 20s | 0.01 s | ~32000x |
-| T3 | ~10 min 0s | 0.00 s | ~60000x |
+| T2 | ~5 min 20s | 0.00 s | ~32000x |
+| T3 | ~10 min 0s | 0.01 s | ~60000x |
 
 ## 4. Compliance gap detection
 

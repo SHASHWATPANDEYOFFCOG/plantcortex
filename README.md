@@ -59,7 +59,7 @@ equipment history** → the field dossier + M6 precursor warnings.
 | **D5** | Mobile `/field`, compliance agent, knowledge capture | ✅ |
 | **D6** | Pattern/cause engine, eval harness, demo mode | ✅ |
 
-Graph after full ingest: **~1,304 nodes / 2,267 edges**, **100% linkage completeness**,
+Graph after full ingest: **1,314 nodes / 2,869 edges**, **100% linkage completeness**,
 7/7 P&ID `CONNECTED_TO` process lines recovered from pixels. **82 tests pass.**
 
 ## Capabilities
